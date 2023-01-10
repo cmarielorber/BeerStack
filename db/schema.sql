@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS 'beerstack_db';
-CREATE DATABASE 'beerstack_db';
+DROP DATABASE IF EXISTS beerstack_db;
+CREATE DATABASE beerstack_db;
