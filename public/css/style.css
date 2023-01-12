@@ -1,24 +1,223 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+:root {
+  --brew: #b79b67;
+  --black: #000000;
+  --white: #ffffff;
+  --offwhite: #f0efec;
+  --slate: #76736d;
+  --lightgray: #aca8a8;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+body {
+  font-family: "Special Elite", cursive;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+/* Navbar/Offcanvas (Bucketlist) */
+.navbar-brand {
+  font-family: "Special Elite", cursive;
+  font-size: 50px;
+  color: var(--brew);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.offcanvas-header {
+  color: var(--brew);
+}
+
+#navBarid {
+  width: 100%;
+}
+.navbar-brand {
+  font-size: 80px;
+  color: var(--brew);
+  border-bottom: solid 4px var(--brew);
+}
+
+.offcanvas-header {
+  background-color: #000000;
+  color: var(--brew);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#bucketClose {
+  margin-left: 20px;
+  border: solid var(--brew) 1px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.bucketContainer {
+  background-color: #000000;
+  color: var(--brew);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bucketContainer h5 {
+  color: var(--brew);
+  padding: 5px;
+  border-bottom: dotted 5px var(--brew);
+}
+
+.bucketStyle {
+  background-color: #c5bcac;
+  color: var(--black);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 3px;
+  height: 250px;
+}
+
+.listSpace {
+  padding-top: 8px;
+}
+
+.removeBtn {
+  font-size: 12px;
+  height: 20px;
+  background-color: black;
+  color: var(--brew);
+  margin-left: 5px;
+}
+
+#logoimg {
+  size: 150px;
+  color: var(--brew);
+  border-radius: 100px;
+}
+
+/* Carousel */
+.carousel {
+  margin-top: 0;
+  border-bottom: 5px solid var(--brew);
+  padding: 5px;
+}
+.carousel-caption {
+  color: var(--white);
+  font-size: large;
+}
+
+#carouselimg {
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+}
+
+/* Search Form */
+#searchBrew {
+  background-color: var(--black);
+}
+
+#searchBrewStyle {
+  border: double 5px var(--brew);
+  margin-top: 25px;
+  border-radius: 25px;
+  width: 60%;
+}
+
+#searchBrewbtn {
+  font-family: "Special Elite", cursive;
+  background-color: var(--brew);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#usrSearch {
+  height: 50px;
+  font-size: 15px;
+  background-color: #e6ded2;
+  color: black;
+}
+
+#usrLocation {
+  height: 50px;
+  font-size: 15px;
+  background-color: #e6ded2;
+  color: black;
+}
+
+#nearYou {
+  font-family: "Special Elite", cursive;
+  font-size: x-large;
+  color: var(--brew);
+  border-bottom: 1px solid var(--brew);
+  padding-bottom: 5px;
+}
+
+#searchinfo {
+  font-family: "Special Elite", cursive;
+  font-size: 17px;
+}
+
+/* Cocktail API */
+article {
+  padding-bottom: 15px;
+}
+
+#dailyRecipe {
+  color: var(--brew);
+}
+
+.drinkIngredients {
+  color: white;
+}
+
+.drinkInstruction {
+  color: var(--brew);
+}
+
+.anotherBtn {
+  background-color: var(--brew);
+}
+
+/* Data Table */
+.brewLinkStyle {
+  color: var(--brew);
+}
+
+#tableBrew {
+  border: double 2px var(--brew);
+}
+
+td {
+  border: solid 1px var(--brew);
+  text-align: center;
+}
+
+/* modal pop */
+#modal {
+  font-family: "Special Elite", cursive;
+}
+
+/* MQ's */
+@media screen and (max-width: 1029px) {
+  .navbar-brand {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .navbar-brand {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-brand #text {
+    font-size: 5px;
+  }
 }
