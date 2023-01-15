@@ -23,13 +23,13 @@
       <a class="navbar-brand" href="#">
         <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
           height="150" class="d-inline-block align-text-center rounded-circle" />So-Cal Brew Hopper
+  {{#if logged_in}}
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
       </a>
       <!-- bucket list side opened -->
-      {{#if logged_in}}
       <aside class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
       aria-labelledby="offcanvasNavbarLabel">
       <!-- side bucketlist header -->
