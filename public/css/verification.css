@@ -1,0 +1,59 @@
+:root {
+  --brew: #b79b67;
+  --black: #000000;
+  --white: #ffffff;
+  --offwhite: #f0efec;
+  --slate: #76736d;
+  --lightgray: #aca8a8;
+}
+
+body {
+  font-family: "Special Elite", cursive;
+}
+
+.modal-backdrop {
+  opacity: 0.75;
+
+}
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 5rem;
+  background-color: var(--black);
+  text-align: center;
+  border: double var(--brew) 5px;
+  border-radius: 35px
+}
+
+#model-age-limit{
+border: 20px double var(--brew);
+color:  var(--brew);
+}
+
+ .btn {
+    border-radius: 0 !important;
+    color: var(--brew);
+    border-color: 5px var(--brew_);
+   border-radius: 10px;
+    padding: .5rem 3rem ;
+  }
+
+.btn:hover {
+  background-color: var(--brew);
+ color:  var(--black);
+  border-color: 2px solid var(--brew);
+  padding: .5rem 3rem;
+}
+@media (max-width:768px) {
+  .mobile-margin-bottom{
+    margin-bottom:.5rem;
+  }
+  
+}
+
+#modal-age-limit {
+border-radius: 5px
+}

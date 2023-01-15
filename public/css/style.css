@@ -121,7 +121,10 @@ body {
   width: 60%;
 }
 
-#searchBrewbtn {
+#searchBrewbtn,
+#signup-btn,
+.btn
+ {
   font-family: "Special Elite", cursive;
   background-color: var(--brew);
   height: 50px;
@@ -137,7 +140,22 @@ body {
   color: black;
 }
 
-#usrLocation {
+#usrLocation,
+#username-input-signup,
+#email-input-signup,
+#password-input-signup,
+#zipcode-input-signup {
+  height: 50px;
+  font-size: 15px;
+  background-color: #e6ded2;
+  color: black
+}
+/* #verify-month,
+#verify-day,
+#verify-year */
+.form-input,
+.form-label,
+.anotherBtn {
   height: 50px;
   font-size: 15px;
   background-color: #e6ded2;
