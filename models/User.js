@@ -39,13 +39,13 @@ User.init(
         len: [8],
       },
     },
-    // friends_list: {
-    //   type: DataTypes.STRING,
-    //   references: {
-    //     model: "friends_list",
-    //     key: "friends",
-    //   }
-    // }
+    friendlist: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'friends',
+        key: 'id',
+      }
+    }
   },
   {
     hooks: {
