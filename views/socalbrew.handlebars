@@ -1,3 +1,46 @@
+   <body class="bg-dark d-flex flex-column">
+  <nav id="navBarid" class="navbar bg-dark fixed-top" style="background-color: #0000">
+    <!-- left side nav bar w/ logo and title -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
+          height="150" class="d-inline-block align-text-center rounded-circle" />So-Cal Brew Hopper
+  {{#if logged_in}}
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </a>
+      <!-- bucket list side opened -->
+      <aside class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <!-- side bucketlist header -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">
+          Brewery Bucket List
+        </h5>
+        <button type="button" id="bucketClose" class="btn-close" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <!-- side bucket list body// Table for bucketlist -->
+      <div class="container card col-sm-12 bg-dark">
+        <img src="images/So-CAL Logo.png" class="card-img-top rounded-circle mt-3 mb-3"
+          alt="SoCal Brew logo" />
+
+        <div class="bucketContainer card-body rounded">
+          <h5 class="card-title text-center">Your Bucketlist</h5>
+          <p class="card-text"></p>
+          <ol class="bucketStyle list-group list-group-flush" id="brew-list" style="overflow: auto; max-height: 40vh">
+          </ol>
+        </div>
+      </div>
+    </aside>
+      {{!-- {{else}}
+      <a href="/login">login</a> --}}
+      {{/if}}
+    </div>
+  </nav>
+
     <div id="carousel">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

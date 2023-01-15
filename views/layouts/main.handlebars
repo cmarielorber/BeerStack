@@ -16,51 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
 </head>
 
-<body class="bg-dark d-flex flex-column">
-  <nav id="navBarid" class="navbar bg-dark fixed-top" style="background-color: #0000">
-    <!-- left side nav bar w/ logo and title -->
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
-          height="150" class="d-inline-block align-text-center rounded-circle" />So-Cal Brew Hopper
-  {{#if logged_in}}
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </a>
-      <!-- bucket list side opened -->
-      <aside class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel">
-      <!-- side bucketlist header -->
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">
-          Brewery Bucket List
-        </h5>
-        <button type="button" id="bucketClose" class="btn-close" data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
-      </div>
-      <!-- side bucket list body// Table for bucketlist -->
-      <div class="container card col-sm-12 bg-dark">
-        <img src="images/So-CAL Logo.png" class="card-img-top rounded-circle mt-3 mb-3"
-          alt="SoCal Brew logo" />
-
-        <div class="bucketContainer card-body rounded">
-          <h5 class="card-title text-center">Your Bucketlist</h5>
-          <p class="card-text"></p>
-          <ol class="bucketStyle list-group list-group-flush" id="brew-list" style="overflow: auto; max-height: 40vh">
-          </ol>
-        </div>
-      </div>
-    </aside>
-      {{else}}
-      <a href="/login">login</a>
-      {{/if}}
-    </div>
-  </nav>
 
   <main>
-
+    <body class="bg-dark d-flex flex-column"></body>
     {{{body}}}
 
     <footer>
@@ -108,31 +66,7 @@
   </main>
 
   <!-- Modal SEE VERIFICATION.Handlebars-->
-  {{!-- <modal class="modal fade" id="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-light text-center">
-        <div class="modal-header">
-          <h1 class="modal-title fs-2 align-items-center" id="staticBackdropLabel">
-            So-Cal Brew Hopper Disclaimer
-          </h1>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body fs-4">
-          Must be 21 years of age or older to drink alcohol. Don't be bad
-          kids.
-        </div>
-        <div class="modal-footer d-flex justify-content-between">
-          <button type="button" class="btn btn-secondary" style="background-color: slategray" data-bs-dismiss="modal">
-            I'm older, understood
-          </button>
-          <button type="button" class="btn btn-secondary" style="background-color: var(--brew)" data-bs-dismiss="modal">
-            I'm younger, just looking
-          </button>
-        </div>
-      </div>
-    </div>
-  </modal> --}}
+{{> verification}}
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
