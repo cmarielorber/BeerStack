@@ -1,4 +1,6 @@
 const User = require('./User');
+const Cooler = require('./Cooler');
+const Beers = require('./Beers');
 const Post = require('./Post');
 const Comment = require('./Comment');
 

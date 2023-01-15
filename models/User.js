@@ -16,7 +16,11 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -35,6 +39,13 @@ User.init(
         len: [8],
       },
     },
+    // friends_list: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: "friends_list",
+    //     key: "friends",
+    //   }
+    // }
   },
   {
     hooks: {
