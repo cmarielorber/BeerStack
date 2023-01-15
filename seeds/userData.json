@@ -1,17 +1,20 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
+    "first_name": "John",
+    "last_name": "Wick",
+    "email": "babayaga@continental.com",
     "password": "password12345"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
+    "first_name": "Dwayne",
+    "last_name": "Johnson",
+    "email": "therock@wwe.com",
     "password": "password12345"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
+    "first_name": "Ronald",
+    "last_name": "McDonald",
+    "email": "theclown@mcdonalds.com",
     "password": "password12345"
   }
 ]
