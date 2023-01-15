@@ -7,17 +7,19 @@ const beerData = require('./beerData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
+  await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const beer of beerData) {
-    await Beers.create({
-      ...beer,
-    });
-  }
+  await Beers.bulkCreate(beerData, {
+    individualHooks: true,
+    returning: true,
+  });
+  
+  console.log('\n---------Seeding Complete---------\n')
   process.exit(0);
+
 };
 
 seedDatabase();

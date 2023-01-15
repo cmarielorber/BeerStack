@@ -15,6 +15,7 @@ Cooler.belongsTo(User, {
 
 Cooler.hasMany(Beers, {
   foreignKey: 'id',
+  onDelete: 'SET NULL',
 })
 
 User.hasOne(Friends, {
@@ -60,4 +61,4 @@ Post.hasMany(Comment, {
   foreignkey: 'post_id',
 });
 
-module.exports = { User, Post, Comment };
+module.exports = { User, Beers, Cooler, Friends, Post, Comment };

@@ -14,7 +14,7 @@ Cooler.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'users',
+        model: 'user',
         key: 'id',
       }
     },
@@ -25,13 +25,13 @@ Cooler.init(
         key: 'id',
       },
     },
-    beer_name: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'beers',
-        key: 'name',
-      },
-    }
+    // beer_name: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'beers',
+    //     key: 'name',
+    //   },
+    // }
   },
   {
     sequelize,
