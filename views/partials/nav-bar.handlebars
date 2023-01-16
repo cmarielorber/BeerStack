@@ -1,11 +1,11 @@
 <body class="bg-dark d-flex flex-column">
-  <nav id="navBarid" class="navbar bg-dark fixed-top" style="background-color: #0000">
+  <nav id="navBarid" class="navbar bg-dark" style="background-color: #0000">
     <!-- left side nav bar w/ logo and title -->
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
           height="150" class="d-inline-block align-text-center rounded-circle" />Beerstack
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}} --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
       {{!-- <div class="container card col-sm-12 bg-dark">
         <img src="images/So-CAL Logo.png" class="card-img-top rounded-circle mt-3 mb-3"
           alt="SoCal Brew logo" /> --}}
-
+{{#if logged_in}}
         <div class="bucketContainer card-body rounded">
           <h5 class="card-title text-center">Cooler</h5>
           <p class="card-text"></p>
@@ -35,8 +35,8 @@
         </div>
       </div>
     </aside>
-      {{else}}
-      <a href="/login">login</a>
+      {{!-- {{else}}
+      <a href="/login">login</a> --}}
       {{/if}}
     </div>
   </nav>
