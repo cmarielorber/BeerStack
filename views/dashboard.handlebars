@@ -1,64 +1,72 @@
-
-
+{{> nav-bar}}
 {{!-- //what they see when they signup nad connect to new post and edit/delete posts// --}}
-    <article id="searchBrew">
-      <card class="border-top col-sm-12 d-flex justify-content-center">
-        <div class="col-md-10" id="searchBrewStyle">
-          <!-- inside card -->
-          <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, BALHBALHBLA{{name}}!</h2> 
-  </div>
-</div>
-  </div>
-</div>
 
-          </div>
-        </div>
-      </card>
-    </article>
-
-
-    <article id="searchBrew">
-      <card class="border-top col-sm-12 d-flex justify-content-center">
-        <div class="col-md-10" id="searchBrewStyle">
-          <!-- inside card -->
-          <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-<h2>COOLER</h2>
-<ul>
-  <li>1blah</li>
-  <li>2blah</li>
-  <li>3blah</li>
-  <li>4blah</li>
-  <li>5blah</li>
-</ul>
-  {{!-- {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+<article id="searchBrew">
+  <card class="border-top col-sm-12 d-flex justify-content-center">
+    <div class="col-md-10" id="searchBrewStyle">
+      <!-- inside card -->
+      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <h2>Welcome, BALHBALHBLA{{name}}!</h2> 
       </div>
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div> --}}
+  </card>
+</article>
 
-<h3>EDIT COOLOR</h3>
-<ul>
-  <li>new</li>
-  <li>edit</li>
-  <li>delete</li>
-</ul>
+
+<article id="searchBrew">
+  <card class="border-top col-sm-12 d-flex justify-content-center">
+    <div class="col-md-10" id="searchBrewStyle">
+      <!-- inside card -->
+      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <h2>COOLER</h2>
+          <ul>
+            <li>1blah</li>
+            <li>2blah</li>
+            <li>3blah</li>
+            <li>4blah</li>
+            <li>5blah</li>
+          </ul>
+                          {{!-- {{#if projects.length}}
+                            <div class="col-md-6 project-list">
+                              <h3>Current Projects:</h3>
+
+                              {{#each projects as |project|}}
+                              <div class="row mb-2">
+                                <div class="col-md-8">
+                                  <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+                                </div>
+                                <div class="col-md-4">
+                                  <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+                                </div>
+                              </div>
+                              {{/each}}
+                            </div>
+                            {{/if}}
+                          </div> --}}
+      </div>
+    </div>
+  </card>
+</article>
+
+<article id="searchBrew">
+  <card class="border-top col-sm-12 d-flex justify-content-center">
+    <div class="col-md-10" id="searchBrewStyle">
+      <!-- inside card -->
+      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <h3>EDIT COOLOR</h3>
+            <ul>
+              <li>new</li>
+              <li>edit</li>
+              <li>delete</li>
+            </ul>
 {{!-- href to or partial {{> new-post}}
 href to or partial {{> edit-post}} --}}
+      </div>
+    </div>
+  </card>
+</article>
+
+
 <script src="./js/profile.js"></script>
 
           </div>
