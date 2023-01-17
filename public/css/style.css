@@ -25,6 +25,7 @@ body {
 
 .offcanvas-header {
   color: var(--brew);
+  justify-content: space-around;
 }
 
 #navBarid {
@@ -58,13 +59,24 @@ body {
   font-weight: 600;
 }
 
+
 .bucketContainer h5 {
   color: var(--brew);
-  padding: 5px;
-  border-bottom: dotted 5px var(--brew);
+  align-content: space-around;
+
+  border-radius: 5px;
+  align-items: center;
 }
 
-.bucketStyle {
+.bucketContainer{
+  border: dotted 5px var(--brew);
+}
+
+#navmenu {
+  text-align: center;
+} 
+
+/* .bucketStyle {
   background-color: #c5bcac;
   color: var(--black);
   border-radius: 5px;
