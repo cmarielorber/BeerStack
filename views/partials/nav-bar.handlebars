@@ -3,15 +3,9 @@
     <!-- left side nav bar w/ logo and title -->
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
+        <img id="logoimg rounded-circle" src="/images/Beerstack.png" alt="SoCal Brew Logo" width="150"
           height="150" class="d-inline-block align-text-center rounded-circle" />Beerstack
-        <button>Beerstack</button>
-        <button>Dashboard</button>
-        {{#if logged_in}}
-        <button>logout</button>
-        {{else}}
-        <button>login</button>
-        {{/if}}
+     
 
   {{!-- {{#if logged_in}} --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -24,27 +18,26 @@
       aria-labelledby="offcanvasNavbarLabel">
       <!-- side bucketlist header -->
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">
-          Cooler
-        </h5>
+        <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">BeerStack Menu</h5>
         <button type="button" id="bucketClose" class="btn-close" data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <!-- side bucket list body// Table for bucketlist -->
-      {{!-- <div class="container card col-sm-12 bg-dark">
-        <img src="images/So-CAL Logo.png" class="card-img-top rounded-circle mt-3 mb-3"
-          alt="SoCal Brew logo" /> --}}
-{{#if logged_in}}
+  <!-- side bucket list body// Table for bucketlist -->
+    <div class="container card col-sm-12 bg-dark">
+        <img src="/images/Beerstack.png" class="card-img-top rounded-circle mt-3 mb-3"
+          alt="BrewStack logo" /> 
         <div class="bucketContainer card-body rounded">
-          <h5 class="card-title text-center">Cooler</h5>
-          <p class="card-text"></p>
-          <ol class="bucketStyle list-group list-group-flush" id="brew-list" style="overflow: auto; max-height: 40vh">
-          </ol>
+      <h5 id="cooler-link" class="li-inline nav-item"><a href="/">Cooler</a></h5>
+      <h5 id="dashboard-link" class="li-inline nav-item"><a href="/dashboard">Dashboard</a></h5>
+      <h5 id="settings-link" class="li-inline nav-item"><a href="/user">Settings</a></h5>
+      <h5 id="login-link" class="li-inline nav-item"><a href="/login">Login</a></h5>
+      <h5 id="logout-link" class="li-inline nav-item"><a href="#">Logout</a></h5>
+          {{!-- <p class="card-text column">
+          </p> --}}
+          {{!-- <ol class="bucketStyle list-group list-group-flush" id="brew-list" style="overflow: auto; max-height: 40vh">
+          </ol> --}}
         </div>
       </div>
     </aside>
-      {{!-- {{else}}
-      <a href="/login">login</a> --}}
-      {{/if}}
     </div>
   </nav>
