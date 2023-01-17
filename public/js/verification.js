@@ -114,3 +114,7 @@ $(document).ready(function () {
       }
     }
   });
+
+  // document
+  //   .querySelector('#signup-form')
+  //   .addEventListener('submit', signupFormHandler);
