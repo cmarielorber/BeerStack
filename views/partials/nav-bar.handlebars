@@ -5,6 +5,14 @@
       <a class="navbar-brand" href="#">
         <img id="logoimg rounded-circle" src="/images/So-CAL Logo.png" alt="SoCal Brew Logo" width="150"
           height="150" class="d-inline-block align-text-center rounded-circle" />Beerstack
+        <button>Beerstack</button>
+        <button>Dashboard</button>
+        {{#if logged_in}}
+        <button>logout</button>
+        {{else}}
+        <button>login</button>
+        {{/if}}
+
   {{!-- {{#if logged_in}} --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
