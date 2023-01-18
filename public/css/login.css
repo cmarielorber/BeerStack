@@ -1,0 +1,31 @@
+#logincont{
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 10px;
+}
+
+#searchBrew{
+border-radius: 8px;
+border-style: dotted;
+border-color: var(--brew);
+width: fit-content;
+margin: 10px;
+}
+
+#searchBrewStyle{
+border-style: double;
+border-color: var(--white);
+width: fit-content;
+margin: 25px;
+}
+
+.card {
+margin: 5px;
+width: fit-content;
+}
+
+#signup-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
