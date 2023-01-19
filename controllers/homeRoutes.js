@@ -2,6 +2,7 @@ const router = require('express').Router();
 // const { Project, User } = require('../models');
 // const withAuth = require('../utils/auth');
 
+// Render Homepage
 router.get('/', async (req, res) => {
   try {
     res.render('homepage', {
@@ -10,7 +11,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Render Dashboard
 router.get('/dashboard', async (req, res) => {
   try {
     res.render('dashboard', {
@@ -19,7 +20,7 @@ router.get('/dashboard', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
   try {
     res.render('socalbrew', {
@@ -28,7 +29,7 @@ router.get('/socalbrew', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// Render Login
 router.get('/login', async (req, res) => {
   try {
     res.render('login', {
@@ -38,6 +39,7 @@ router.get('/login', async (req, res) => {
   }
 });
 
+// Render Dashboard
 router.get('/signup', async (req, res) => {
   try {
     res.render('signup', {
@@ -47,6 +49,7 @@ router.get('/signup', async (req, res) => {
   }
 });
 
+// Render Beer List
 router.get('/beerpost', async (req, res) => {
   try {
     res.render('beerpost', {
