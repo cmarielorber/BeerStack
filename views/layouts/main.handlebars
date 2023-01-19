@@ -1,75 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SoCal Brew Hopper</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/custom.css" />
-  <script src="https://kit.fontawesome.com/93df6eac37.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>SoCal Brew Hopper</title>
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
+      integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi'
+      crossorigin='anonymous'
+    />
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel='stylesheet' href='css/style.css' />
+    <link rel='stylesheet' href='css/custom.css' />
+    <link rel='stylesheet' href='css/about.css' />
+    <script
+      src='https://kit.fontawesome.com/93df6eac37.js'
+      crossorigin='anonymous'
+    ></script>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='' />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'
+      rel='stylesheet'
+    />
+  </head>
 
 
-<main>
-    <body class="bg-dark d-flex flex-column"></body>
-    {{{body}}}
-</main>
+  <body class='bg-dark d-flex flex-column'>
+    <main>
+      {{{body}}}
+    </main>
 
-<footer>
-    <section class="text-center about" style= "text-decoration: none; color: #b79b67; padding-top: 16px; border-top: solid 2px var(--brew);">
-      <h1>About Us</h1>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
-              <span class="fa-solid fa-people-group"></span>
-              <h2 class="pt-3">The Team</h2>
-              <p class="lead">Isaac Gonzalez</p>
-              <p class="lead">Christen Lorber</p>
-              <p class="lead">Louis Yoon</p>
+
+    <footer>
+      <div class="d-grid gap-2">
+      <button
+        class='btn btn-primary text-center'
+        type='button'
+        data-bs-toggle='collapse'
+        data-bs-target='#collapseExample'
+        aria-expanded='false'
+        aria-controls='collapseExample'
+      >About Us
+      </button>
+      </div>
+      <div class='collapse' id='collapseExample'>
+        <div class='card card-body'>
+          <div class='content'>
+            <div class='container'>
+              <div class='row'>
+                <div
+                  class='col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn'
+                  data-wow-offset='200'
+                >
+                  <span class='fa-solid fa-people-group'></span>
+                  <h2 class='pt-3'>The Team</h2>
+                  <p class='lead'>Isaac Gonzalez</p>
+                  <p class='lead'>Christen Lorber</p>
+                  <p class='lead'>Louis Yoon</p>
+                </div>
+                <div
+                  class='col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn'
+                  data-wow-offset='200'
+                >
+                  <span class='fa fa-info'></span>
+                  <h2 class='pt-3'>The App</h2>
+                  <p class='lead'>
+                    So-Cal Brew Hopper is an interactive tool that allows the
+                    User to search for desired breweries in the San Diego area
+                    and turn their destination into a custom User bucket list.
+                    This will allow the User to actively track which breweries
+                    they have yet to visit, as well as remove them once their
+                    visit is completed. If the User is looking to stay in for
+                    the night, the app provides a featured cocktail recipe.
+                  </p>
+                </div>
+                <div
+                  class='col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn'
+                  data-wow-offset='200'
+                >
+                  <span class='fa fa-file'></span>
+                  <h2 class='pt-3'>Resources</h2>
+                  <p class='lead'>
+                    HTML, CSS, JavaScript, JQuery, Bootstrap, GitHub, Bootcamp
+                    Instructional Team
+                  </p>
+                </div>
+              </div>
+
             </div>
-            <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
-              <span class="fa fa-info"></span>
-              <h2 class="pt-3">The App</h2>
-              <p class="lead">
-                So-Cal Brew Hopper is an interactive tool that allows the User
-                to search for desired breweries in the San Diego area and turn
-                their destination into a custom User bucket list. This will
-                allow the User to actively track which breweries they have yet
-                to visit, as well as remove them once their visit is
-                completed. If the User is looking to stay in for the night,
-                the app provides a featured cocktail recipe.
-              </p>
-            </div>
-            <div class="col-lg-4 col-sm-6 col-ex-12 about-item wow lightSpeedIn" data-wow-offset="200">
-              <span class="fa fa-file"></span>
-              <h2 class="pt-3">Resources</h2>
-              <p class="lead">
-                HTML, CSS, JavaScript, JQuery, Bootstrap, GitHub, Bootcamp
-                Instructional Team
-              </p>            
-            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </footer>
+    </footer>
 
-  <!-- Modal SEE VERIFICATION.Handlebars-->
-{{> verification}}
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script src="/js/carousel.js"></script>
-  <script src="/js/cocktail.js"></script>
-  <script src="/js/script.js"></script>
-</body>
+    <!-- Modal SEE VERIFICATION.Handlebars-->
+    {{> verification}}
+
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'
+      integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3'
+      crossorigin='anonymous'
+    ></script>
+    {{!-- <script src='/js/carousel.js'></script> --}}
+    {{!-- <script src='/js/cocktail.js'></script> --}}
+    <script src='/js/script.js'></script>
+    {{!-- <script src='/js/verification.js'></script> --}}
+  </body>
 
 </html>

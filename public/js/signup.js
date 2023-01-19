@@ -1,16 +1,17 @@
+
 const signupFormHandler = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript
-    event.preventDefault();
+    // event.preventDefault();
     // Gather the data from the form elements on the page
-    const username = document.querySelector('#username-input-signup').value.trim();
+    const firstname = document.querySelector('#first-input-signup').value.trim();
+    const lastname = document.querySelector('#last-input-signup').value.trim();
     const email = document.querySelector('#email-input-signup').value.trim();
     const password = document.querySelector('#password-input-signup').value.trim();
-    const zipcode = document.querySelector('#zipcode-input-signup').value.trim();
-
+  
     if (signup) {
-        const response = await fetch('/api/user', {
+        const response = await fetch('', {
             method: 'POST',
-            body: JSON.stringify({ username, email, password, zipcode  }),
+            body: JSON.stringify({ firstname, lastname, email, password  }),
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
@@ -19,8 +20,8 @@ const signupFormHandler = async (event) => {
             alert('Failed to log in');
         }
     }
-};
-
-document
-    .querySelector('#signup-form')
+  };
+  document
+    .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
+  
