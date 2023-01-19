@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.post('/signup', async (req, res) => {
-
+// remove before final
+router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
 
