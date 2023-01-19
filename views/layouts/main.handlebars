@@ -4,7 +4,7 @@
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>SoCal Brew Hopper</title>
+    <title>BeerStack</title>
     <link
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
@@ -12,9 +12,9 @@
       crossorigin='anonymous'
     />
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <link rel='stylesheet' href='css/style.css' />
-    <link rel='stylesheet' href='css/custom.css' />
-    <link rel='stylesheet' href='css/about.css' />
+    <link rel='stylesheet' href='../css/style.css' />
+    <link rel='stylesheet' href='../css/custom.css' />
+    {{!-- <link rel='stylesheet' href='css/about.css' /> --}}
     <script
       src='https://kit.fontawesome.com/93df6eac37.js'
       crossorigin='anonymous'
@@ -29,10 +29,10 @@
 
 
   <body class='bg-dark d-flex flex-column'>
+     {{> nav-bar}}
     <main>
       {{{body}}}
     </main>
-
 
     <footer>
       <div class="d-grid gap-2">
