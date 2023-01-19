@@ -1,4 +1,4 @@
-// // On Load - Keeps Local Storage, Shows Modal
+// On Load - Keeps Local Storage, Shows Modal
 // $(window).on("load", function () {
 //   $("#modal").modal("show");
 //   bucketListRefresh();
