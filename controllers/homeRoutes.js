@@ -47,20 +47,7 @@ router.get('/signup', async (req, res) => {
 });
 
 // Render Beer List
-// router.get('/beerpost', async (req, res) => {
-//   try {
-//     const beerData = await Beers.findAll({
-//       attributes: { include: ['name', 'likes'] },
-//       order: [['name', 'ASC']],
-//     });
 
-//     const beers = beerData.map((beers) => beers.get({ plain: true }));
-
-//     res.render('beerpost', {...beers});
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 router.get('/beerpost', async (req, res) => {
   const beerData = await Beers.findAll().catch((err) => { 
       res.json(err);
@@ -68,9 +55,6 @@ router.get('/beerpost', async (req, res) => {
       const beers = beerData.map((beer) => beer.get({ plain: true }));
       res.render('beerpost', { beers });
     });
-
-
-
 
 
 // router.get('/profile', withAuth, async (req, res) => {
