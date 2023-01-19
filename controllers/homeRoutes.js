@@ -1,12 +1,13 @@
 const router = require('express').Router();
-// const { Project, User } = require('../models');
+// const { Model } = require('sequelize');
+// const { User } = require('../models');
+const Beers = require('../models/Beers');
 // const withAuth = require('../utils/auth');
 
 // Render Homepage
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', {
-    });
+    res.render('homepage', {});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -14,8 +15,7 @@ router.get('/', async (req, res) => {
 // Render Dashboard
 router.get('/dashboard', async (req, res) => {
   try {
-    res.render('dashboard', {
-    });
+    res.render('dashboard', {});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -23,8 +23,7 @@ router.get('/dashboard', async (req, res) => {
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
   try {
-    res.render('socalbrew', {
-    });
+    res.render('socalbrew', {});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -32,8 +31,7 @@ router.get('/socalbrew', async (req, res) => {
 // Render Login
 router.get('/login', async (req, res) => {
   try {
-    res.render('login', {
-    });
+    res.render('login', {});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -42,22 +40,37 @@ router.get('/login', async (req, res) => {
 // Render Dashboard
 router.get('/signup', async (req, res) => {
   try {
-    res.render('signup', {
-    });
+    res.render('signup', {});
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // Render Beer List
+// router.get('/beerpost', async (req, res) => {
+//   try {
+//     const beerData = await Beers.findAll({
+//       attributes: { include: ['name', 'likes'] },
+//       order: [['name', 'ASC']],
+//     });
+
+//     const beers = beerData.map((beers) => beers.get({ plain: true }));
+
+//     res.render('beerpost', {...beers});
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 router.get('/beerpost', async (req, res) => {
-  try {
-    res.render('beerpost', {
+  const beerData = await Beers.findAll().catch((err) => { 
+      res.json(err);
     });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+      const beers = beerData.map((beer) => beer.get({ plain: true }));
+      res.render('beerpost', { beers });
+    });
+
+
+
 
 
 // router.get('/profile', withAuth, async (req, res) => {
@@ -78,7 +91,6 @@ router.get('/beerpost', async (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
-
 
 // router.get('/project/:id', async (req, res) => {
 //   try {
