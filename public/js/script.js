@@ -1,8 +1,8 @@
-// On Load - Keeps Local Storage, Shows Modal
-$(window).on("load", function () {
-  $("#modal").modal("show");
-  bucketListRefresh();
-});
+// // On Load - Keeps Local Storage, Shows Modal
+// $(window).on("load", function () {
+//   $("#modal").modal("show");
+//   bucketListRefresh();
+// });
 
 //Filters and removes duplicate array
 function removeDuplicates(arr) {
