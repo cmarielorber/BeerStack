@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 // Render Dashboard
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard',async (req, res) => {
   try {
     res.render('dashboard', {});
   } catch (err) {

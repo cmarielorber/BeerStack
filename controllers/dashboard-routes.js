@@ -37,7 +37,7 @@ router.get('/', withAuth, async (req, res) => {
         res.render('all-posts-admin', {
             layout: 'dashboard',
             posts,
-            logged_in: true,
+            logged_in: req.session,
         });
     } catch (err) {
         res.status(500).json(err);
