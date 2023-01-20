@@ -7,7 +7,8 @@ const Beers = require('../models/Beers');
 // Render Homepage
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', {});
+    const login_status = req.session.logged_in;
+    res.render('homepage', {  login_status });
   } catch (err) {
     res.status(500).json(err);
   }
