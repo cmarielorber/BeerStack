@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
   try {
