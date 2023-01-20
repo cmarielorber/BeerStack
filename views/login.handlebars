@@ -5,7 +5,7 @@
     <input type='checkbox' id='chk' aria-hidden='true' />
 
     <div class='signup'>
-      <form class='signup-form'>
+      <form class='signup-form' id='signup-form'>
         <label for='chk' aria-hidden='true'>Sign up</label>
         <input
           id='first-input-signup'
@@ -24,7 +24,7 @@
           required=''
         />
         <input
-          id='last-input-signup'
+          id='email-input-signup'
           for='email-input-signup'
           type='email'
           name='email'
@@ -39,7 +39,7 @@
           placeholder='Password'
           required=''
         />
-        <button class="login-button">Sign up</button>
+        <button type='submit' class='login-button'>Sign up</button>
       </form>
     </div>
 
@@ -61,10 +61,10 @@
           required=''
           id='password-login'
         />
-        <button class="login-button">Login</button>
+        <button class='login-button'>Login</button>
       </form>
     </div>
   </div>
 </div>
 <script src='/js/login.js'></script>
-<script src='/js/logout.js'></script>
+<script src='/js/signup.js'></script>
