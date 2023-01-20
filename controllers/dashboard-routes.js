@@ -2,47 +2,42 @@ const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+// const Post = require("../models/Post");
+
+router.get('/', async (req, res) => {
+  const userData = await User.findAll().catch((err) => { 
+      res.json(err);
+    });
+      const users = userData.map((user) => user.get({ plain: true }));
+      res.render('dashboard', { users });
+    });
+
+
+
+
+
+
 //return all posts associated with the user
 router.get('/', withAuth, async (req, res) => {
     try {
-        const postData = await Post.findAll({
+      // MODIFY THIS LATER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        const postData = await User.findAll({
             include: [
                 {
                     model: User,
-                    attributes: ['username'],
+                    attributes: ['password'],
                 },
             ],
         });
-        // const postData = await Post.findAll({
-        //     where: { user_id: req.session.user_id },
-        //     attributes: ['id', 'title', 'content', 'created_at'],
-        //     include: [
-        //         {
-        //             model: Comment,
-        //             attributes: [
-        //                 'id',
-        //                 'comment_text',
-        //                 'post_id',
-        //                 'user_id',
-        //                 'created_at',
-        //             ],
-        //             include: { model: User, attributes: ['username'] },
-        //         },
-        //         { model: User, attributes: ['username'] },
-        //     ],
-        // });
-        // Serialize data so the template can read it and reverse order so newest posts show near top
         const posts = postData.map((post) => post.get({ plain: true }));
         // Pass serialized data and session flag into template
-        res.render('all-posts-admin', {
-            layout: 'dashboard',
-            posts,
-            logged_in: req.session,
-        });
-    } catch (err) {
+        res.render('dashboard', { posts })
+      } catch (err) {
         res.status(500).json(err);
     }
 });
+
 
 //edit post route
 router.get('/edit/:id', withAuth, async (req, res) => {
@@ -82,8 +77,13 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/new', (req, res) => {
+router.post('/new', (req, res) => {
+  try {
     res.render('new-post');
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
