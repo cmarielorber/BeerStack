@@ -12,14 +12,6 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// Render Dashboard
-router.get('/dashboard', async (req, res) => {
-  try {
-    res.render('dashboard', {});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
   try {

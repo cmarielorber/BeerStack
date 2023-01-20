@@ -1,27 +1,28 @@
-{{> nav-bar}}
-{{!-- //what they see when they signup nad connect to new post and edit/delete posts// --}}
-{{!-- {{#if logged_in}} --}}
-<!DOCTYPE html>
-<html lang="en">
+<body class="border rounded m-2 p-4">
+  <div class="border row p-2 justify-content-center">
+    <div id="newpost" class="col-sm-4 p-2">
+      <h1 class="border rounded p-2">
+        <a class="border rounded p-1" href="/dashboard/new" 
+        style=
+          "text-decoration: none;
+          color: var(--brew);">🍺 Beer Post </a>
+      </h1>
+    </div>
+    <div id="newpost" class="col-sm-4 border">
+      <h1 class="border rounded p-2" style="color: var(--brew);">
+        Your Posts
+      </h1>
+      {{#each users as |user| }}
+      <p style="color: var(--brew);">
+        {{ first_name }}
+      </p>
+      {{/each}}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/dashboard.css">
-</head>
-
-  <main class="col-auto">
-    {{{body}}}
-  </main>
-
-  <div id = "newpost" class="footer flex-row justify-center">
-    <h1><a href="/dashboard/new" style="text-decoration: none; color: var(--brew);">🍺 Beer Post</a></h1>
+    </div>
+    <div id="newpost" class="col-sm-4 border">
+      <h1 class="border rounded p-2" style="color: var(--brew);">
+        Your Cooler!
+      </h1>
+    </div>
   </div>
 </body>
-
-
-{{!-- <script src="/js/edit.js"></script>
-<script src="/js/delete.js"></script> --}}
-
-</html>
