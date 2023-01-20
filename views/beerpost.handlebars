@@ -1,4 +1,4 @@
-{{> nav-bar}}
+
 
   <article id="searchBrew">
     <card class="border-top col-sm-12 d-flex justify-content-center">
@@ -9,6 +9,14 @@
       <h2>BEER LIST</h2>
   <div>
  
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Filter by:</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Name</a>
+    <a href="#about">Likes</a>
+  </div>
+</div>
+
   {{#each beers as |beers| }}
     <a class="list-item flex-row justify-space-between">
       <ul>
