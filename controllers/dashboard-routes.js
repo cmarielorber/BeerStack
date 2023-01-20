@@ -5,14 +5,22 @@ const withAuth = require('../utils/auth');
 
 // const Post = require("../models/Post");
 
-router.get('/', async (req, res) => {
-  const userData = await User.findAll().catch((err) => { 
-      res.json(err);
-    });
-      const users = userData.map((user) => user.get({ plain: true }));
-      res.render('dashboard', { users });
-    });
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll()
 
+    const users = userData.map((user) => user.get({ plain: true }));
+    const login_status = req.session.logged_in;
+    console.log('in')
+    console.log('----------------------------');
+    console.log(login_status);
+    console.log('----------------------------');
+    console.log('out')
+    res.render('dashboard', { users, login_status });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
