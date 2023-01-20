@@ -6,19 +6,17 @@
           <!-- inside card -->
      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
      <div class="text-center">
-      <h2>PLACEHOLDER BEERPOST NAME{{name}}</h2>
-        {{!-- <p>{{{get_emoji}}}</p> --}}
-        <p>PLACEHOLDER BEERPOST INFO{{description}}</p>
-        {{!-- <p>Created by {{user.name}} on {{format_date date_created}}</p>
-        <p>
-        <span for="img" aria-label="post">💲</span>
-        <span class="brewtopic">{{format_amount needed_funding}}</span>
-        </p> --}}
-    <button class="btn btn-primary">POST BREW</button>
+      <h2>BEER LIST</h2>
+  <div>
+ 
+  {{#each beers as |beers| }}
+    <a class="list-item flex-row justify-space-between">
+      <ul>
+      {{ name }}
+      </ul>
+    </a>
+  {{/each}}
+
+    <button class="btn btn-primary">we need a button?</button>
   </p>
-</div>
-
-
-</div>
-</div>
-</div>
+  </div>
