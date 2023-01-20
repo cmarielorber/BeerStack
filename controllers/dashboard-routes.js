@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 
 // const Post = require("../models/Post");
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   const userData = await User.findAll().catch((err) => { 
       res.json(err);
     });
