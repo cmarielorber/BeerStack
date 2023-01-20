@@ -7,13 +7,12 @@
     --lightgray: #aca8a8;
   }
 
-body{
+.login-body{ 
 	margin: 0;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 	font-family: "Special Elite", cursive;
 	background: linear-gradient(to bottom, var(--black), var(--slate), var(--lightgray));
 }
@@ -63,7 +62,7 @@ input{
 	border-radius: 5px;
   font-family: "Special Elite", cursive;
 }
-button{
+.login-button{
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
@@ -76,13 +75,14 @@ button{
 	margin-top: 20px;
 	outline: none;
 	border: dotted;
-  border-color: var(--brew);
+    border-color: var(--brew);
 	border-radius: 5px;
 	transition: .2s ease-in;
 	cursor: pointer;
-  font-family: "Special Elite", cursive;
+    font-family: "Special Elite", cursive;
 }
-button:hover{
+
+.login-button:hover{
 	background: var(--white);
 }
 
