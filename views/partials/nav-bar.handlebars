@@ -30,8 +30,9 @@
       <h5 id="cooler-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/">Cooler</a></h5>
       <h5 id="dashboard-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/dashboard">Dashboard</a></h5>
       <h5 id="settings-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/user">Settings</a></h5>
-      {{#if logged_in}}
-        <h5 id="logout-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" id="logout-link">Logout</a></h5>
+      <p>----- {{ login_status }} --------</p>
+      {{#if login_status}}
+      <h5 id="logout-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" id="logout-link">Logout</a></h5>
       {{else}}
       <h5 id="login-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/login">Login</a></h5>
       {{/if}}  
