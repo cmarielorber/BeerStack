@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
       res.render('beerpost', { beers });
     });
 
+
     // MODIFY TO SORT BY ALPHA
     router.get('/beerpostalpha', async (req, res) => {
       const beerData = await Beers.findAll().catch((err) => { 
@@ -28,4 +29,3 @@ router.get('/', async (req, res) => {
           res.render('beerpostalpha', { beers });
         });
 module.exports = router;
-
