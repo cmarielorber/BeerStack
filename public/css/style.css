@@ -16,7 +16,7 @@ body {
   font-family: "Special Elite", cursive;
   font-size: 50px;
   color: var(--brew);
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: center;
   justify-content: space-around;
@@ -26,31 +26,16 @@ body {
 .offcanvas-header {
   color: var(--brew);
   justify-content: space-around;
-  text-align: center;
 }
 
 #navBarid {
-  width: 75%;
+  width: 100%;
 }
 .navbar-brand {
   font-size: 80px;
   color: var(--brew);
   border-bottom: solid 4px var(--brew);
-  width:100%;
 }
-
-#nav-nav{
-  float:right;
-  position: absolute;
-  top:125px;
-  right: 0px;
-  align-items: stretch;
-}
-
-#about-btn{
-background-color: none;
-}
-
 
 .offcanvas-header {
   background-color: #000000;
@@ -59,9 +44,16 @@ background-color: none;
   justify-content: center;
   text-align: center;
 }
+#bucketClose {
+  margin-left: 20px;
+  border: solid var(--brew) 1px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
 
-.navContainer {
-  /* background-color: #000000; */
+.bucketContainer {
+  background-color: #000000;
   color: var(--brew);
   font-size: 13px;
   font-weight: 600;
@@ -129,13 +121,11 @@ background-color: none;
 }
 
 /* Search Form */
-#searchBrew,
-#top-post {
+#searchBrew {
   background-color: var(--black);
 }
 
-#searchBrewStyle,
-#top-post {
+#searchBrewStyle {
   border: double 5px var(--brew);
   margin-top: 25px;
   border-radius: 25px;
