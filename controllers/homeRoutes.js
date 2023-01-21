@@ -7,7 +7,8 @@ const Beers = require('../models/Beers');
 // Render Homepage
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage', {});
+    const login_status = req.session.logged_in;
+    res.render('homepage', {  login_status });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -41,13 +42,13 @@ router.get('/signup', async (req, res) => {
 
 // Render Beer List
 
-router.get('/beerpost', async (req, res) => {
-  const beerData = await Beers.findAll().catch((err) => { 
-      res.json(err);
-    });
-      const beers = beerData.map((beer) => beer.get({ plain: true }));
-      res.render('beerpost', { beers });
-    });
+// router.get('/beerpost', async (req, res) => {
+//   const beerData = await Beers.findAll().catch((err) => { 
+//       res.json(err);
+//     });
+//       const beers = beerData.map((beer) => beer.get({ plain: true }));
+//       res.render('beerpost', { beers });
+//     });
 
 
 // router.get('/profile', withAuth, async (req, res) => {

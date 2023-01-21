@@ -1,117 +1,47 @@
-<body class='bg-dark d-flex flex-column'>
-
+<body class="bg-dark d-flex flex-column">
+  <nav id="navBarid" class="navbar bg-dark" style="background-color: #0000">
     <!-- left side nav bar w/ logo and title -->
-    <div class='container-fluid'>
-      <a class='navbar-brand' href='#'style="color: var(--brew)">
-        <img
-          id='logoimg rounded-circle'
-          src='/images/BS-Logo.png'
-          alt='BeerStack Logo'
-          width='100'
-          height='100'
-          class='d-inline-block align-text-center rounded-circle'>BeerStack</a>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="logoimg rounded-circle" src="/images/Beerstack.png" alt="SoCal Brew Logo" width="150"
+          height="150" class="d-inline-block align-text-center rounded-circle">Beerstack</img>
+     
 
-    </div>
-
-  <nav id='navBarid' class='navbar bg-dark' style='background-color: #0000'></nav>
-    <aside id='nav-nav'> 
-      <div id='navContainer'class='container card col-sm-12 bg-dark'>
-        <img
-          src='/images/BS-Logo.png'
-           width='100'
-          height='100'
-          class='card-img-top rounded-circle weight:'
-          alt='BrewStack logo'
-        />
-        <div class='offcanvas-header' >
-        <h5 class='offcanvas-title fs-3 align-text-center ' id='offcanvasNavbarLabel' style="">Menu</h5>
+  {{!-- {{#if logged_in}} --}}
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </a>
+      <!-- bucket list side opened -->
+      <aside class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+      <!-- side bucketlist header -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">BeerStack Menu</h5>
+        <button type="button" id="bucketClose" class="btn-close" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
       </div>
-        <div class='navContainer card-body rounded'>
-          <h5 id='cooler-link' class='li-inline nav-item'><a
-              style='text-decoration: none; color: var(--brew);'
-              href='/'
-            >Cooler</a></h5>
-          <h5 id='dashboard-link' class='li-inline nav-item'><a
-              style='text-decoration: none; color: var(--brew);'
-              href='/dashboard'
-            >Dashboard</a></h5>
-          <h5 id='settings-link' class='li-inline nav-item'><a
-              style='text-decoration: none; color: var(--brew);'
-              href='/'
-            >Brewclopedia</a></h5>
-          <p>----- {{ login_status }} --------</p>
+  <!-- side bucket list body// Table for bucketlist -->
+    <div class="container card col-sm-12 bg-dark">
+        <img src="/images/Beerstack.png" class="card-img-top rounded-circle mt-3 mb-3"
+          alt="BrewStack logo" /> 
+        <div class="bucketContainer card-body rounded">
+      <h5 id="cooler-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/">Cooler</a></h5>
+      <h5 id="dashboard-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/dashboard">Dashboard</a></h5>
+      <h5 id="settings-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/user">Settings</a></h5>
+      <p>----- {{ login_status }} --------</p>
       {{#if login_status}}
-          <h5 id='logout-link' class='li-inline nav-item'><a
-              style='text-decoration: none; color: var(--brew);'
-              id='logout-link'
-            >Logout</a></h5>
-          {{else}}
-          <h5 id='login-link' class='li-inline nav-item'><a
-              style='text-decoration: none; color: var(--brew);'
-              href='/login'
-            >Brew Me</a></h5>
-          {{/if}}  
+      <h5 id="logout-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" id="logout-link">Logout</a></h5>
+      {{else}}
+      <h5 id="login-link" class="li-inline nav-item"><a style="text-decoration: none; color: var(--brew);" href="/login">Login</a></h5>
+      {{/if}}  
 
-          <button
-            id='about-btn'
-            class='btn fixed-bottom'
-            type='button'
-            data-bs-toggle='offcanvas'
-            data-bs-target='#offcanvasWithBothOptions'
-            aria-controls='offcanvasWithBothOptions'
-            style='color:var(--brew)'
-          >About Us</button>
-          <div
-            class='offcanvas offcanvas-end'
-            data-bs-scroll='true'
-            tabindex='-1'
-            id='offcanvasWithBothOptions'
-            aria-labelledby='offcanvasWithBothOptionsLabel'
-          >
-            <div class='offcanvas-header'>
-              <h5
-                class='offcanvas-title'
-                id='offcanvasWithBothOptionsLabel'
-              >About BrewStack</h5>
-              <button
-                type='button'
-                class='btn-close'
-                data-bs-dismiss='offcanvas'
-                aria-label='Close'
-              ></button>
-            </div>
-            <div class='offcanvas-body'>
-          <h2 class='pt-3'>The Team</h2>
-                <p class='lead'>Isaac Gonzalez</p>
-                <p class='lead'>Christen Lorber</p>
-                <p class='lead'>Louis Yoon</p>
-              
-              <div>
-                <h2 class='pt-3'>The App</h2>
-                <p class='lead'>
-                  So-Cal Brew Hopper is an interactive tool that allows the
-                  User to search for desired breweries in the San Diego area
-                  and turn their destination into a custom User bucket list.
-                  This will allow the User to actively track which breweries
-                  they have yet to visit, as well as remove them once their
-                  visit is completed. If the User is looking to stay in for
-                  the night, the app provides a featured cocktail recipe.
-                </p>
-              </div>
-              <div>
-                <h2 class='pt-3'>Resources</h2>
-                <p class='lead'>
-                  HTML, CSS, JavaScript, JQuery, Bootstrap, GitHub, Bootcamp
-                  Instructional Team
-                </p>
-            </div>
-          </div>
         </div>
       </div>
-
     </aside>
+    </div>
   </nav>
-</body>
 
 <script src='/js/logout.js'></script>
 {{!-- 

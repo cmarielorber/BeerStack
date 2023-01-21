@@ -11,12 +11,6 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((user) => user.get({ plain: true }));
     const login_status = req.session.logged_in;
-    console.log('in')
-    console.log('----------------------------');
-    console.log(login_status);
-    console.log('----------------------------');
-    console.log('out')
-    res.render('dashboard', { users, login_status });
   } catch (err) {
     res.status(500).json(err);
   }
