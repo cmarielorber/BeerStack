@@ -12,19 +12,18 @@
 <div class="dropdown">
   <button onclick="dropdownBtn()" class="dropbtn">Filter by:</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="/beerpostalpha">Alphabetically</a>
-    <a href="/beerpostlikes">Likes</a>
+    <a href="#home">Name</a>
+    <a href="#about">Likes</a>
   </div>
 </div>
 
- 
+  {{#each beers as |beers| }}
     <a class="list-item flex-row justify-space-between">
       <ul>
-        {{#each beers as |beers| }}
-      <li id="beers">{{ name }}</li>
-        {{/each}}
+      {{ name }}
       </ul>
     </a>
+  {{/each}}
 
     <button class="btn btn-primary">we need a button?</button>
   </p>
