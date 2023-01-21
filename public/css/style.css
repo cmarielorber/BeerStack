@@ -16,7 +16,7 @@ body {
   font-family: "Special Elite", cursive;
   font-size: 50px;
   color: var(--brew);
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: center;
   justify-content: space-around;
@@ -26,16 +26,31 @@ body {
 .offcanvas-header {
   color: var(--brew);
   justify-content: space-around;
+  text-align: center;
 }
 
 #navBarid {
-  width: 100%;
+  width: 75%;
 }
 .navbar-brand {
   font-size: 80px;
   color: var(--brew);
   border-bottom: solid 4px var(--brew);
+  width: 100%;
 }
+
+#nav-nav{
+  float:right;
+  position: absolute;
+  top:125px;
+  right: 0px;
+  align-items: stretch;
+}
+
+#about-btn{
+background-color: none;
+}
+
 
 .offcanvas-header {
   background-color: #000000;
@@ -44,22 +59,15 @@ body {
   justify-content: center;
   text-align: center;
 }
-#bucketClose {
-  margin-left: 20px;
-  border: solid var(--brew) 1px;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-}
 
-.bucketContainer {
-  background-color: #000000;
+.navContainer {
+  /* background-color: #000000; */
   color: var(--brew);
   font-size: 13px;
   font-weight: 600;
 }
 
-.bucketContainer h5 {
+.navContainer h5 {
   color: var(--brew);
   align-content: space-around;
 
@@ -67,7 +75,7 @@ body {
   align-items: center;
 }
 
-.bucketContainer{
+.navContainer {
   border: dotted 5px var(--brew);
 }
 
@@ -121,11 +129,13 @@ body {
 }
 
 /* Search Form */
-#searchBrew {
+#searchBrew,
+#top-post {
   background-color: var(--black);
 }
 
-#searchBrewStyle {
+#searchBrewStyle,
+#top-post {
   border: double 5px var(--brew);
   margin-top: 25px;
   border-radius: 25px;
@@ -243,7 +253,6 @@ td {
 }
 
 .dropdown {
-  float: right;
   position: relative;
   display: inline-block;
 }
