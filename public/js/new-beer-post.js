@@ -4,16 +4,14 @@ const newBeerHandler = async (event) => {
 
   // Gather the data from the form elements on the page
   const name = document.querySelector('#beer-input-add').value.trim();
-  console.log('######', name);
-  if (content) {
+  if (name) {
       const response = await fetch('/api/beer', {
           method: 'POST',
           body: JSON.stringify({ name }),
           headers: { 'Content-Type': 'application/json' },
       });
       if (response.ok) {
-          console.log('$$$$$$$$$$$$$$$$$$$$$$',response.ok)
-          // document.location.replace("/beerpost");
+          document.location.replace("/beerpost");
       } else {
           alert('Error');
       }
