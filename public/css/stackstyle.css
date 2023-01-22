@@ -65,6 +65,9 @@
     animation-duration: .8s;
   }
   
+  #about-btn{
+    background-color: black;
+    }
   
   @keyframes example {
     0% {
