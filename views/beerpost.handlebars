@@ -1,33 +1,67 @@
+<article id="searchBrew">
+  <card class="border-top col-sm-12 d-flex justify-content-center">
+    <div class="col-md-10" id="searchBrewStyle">
+      <!-- inside card -->
+      <div class="mt-3 row g-0 rounded row">
+        <div class="text-center">
+          <h2>BEER LIST</h2>
+        </div>
 
+      </div>
+      <div>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Filter by:</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Name</a>
+            <a href="#about">Likes</a>
+          </div>
+        </div>
 
-  <article id="searchBrew">
-    <card class="border-top col-sm-12 d-flex justify-content-center">
-     <div class="col-md-10" id="searchBrewStyle">
-          <!-- inside card -->
-     <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-     <div class="text-center">
-      <h2>BEER LIST</h2>
-  <div>
- 
-<div class="dropdown">
-  <button onclick="dropdownBtn()" class="dropbtn">Filter by:</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="/beerpostalpha">Alphabetically</a>
-    <a href="/beerpostlikes">Likes</a>
-  </div>
-</div>
-
- 
-    <a class="list-item flex-row justify-space-between">
-      <ul>
         {{#each beers as |beers| }}
-      <li id="beers">{{ name }}</li>
+        <a class="list-item flex-row justify-space-between">
+          <ul>
+            {{ name }}
+          </ul>
+        </a>
         {{/each}}
-      </ul>
-    </a>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Beer Name</th>
+              <th scope="col">Add to Beerlist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PLACEHOLDER</td>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+        
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Beer I Like </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Favorite Brew</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
 
-    <button class="btn btn-primary">we need a button?</button>
-  </p>
-  </div>
-
-   <script src='/js/sort.js'></script>
+                <form class='newBeer-form' id='newBeer-form'>
+                  <input id='beer-input-add' for='beer-input-add' type='text' name='txt' placeholder='Enter Beer Here'
+                    required='' />
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
+                    <button type="submit" class="btn btn-primary">Add It</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+      </div>
+    </div>

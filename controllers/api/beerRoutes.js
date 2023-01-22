@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const newBeer = await Beers.create({
-      ...req.body,
+      ...req.body
     });
 
     res.status(200).json(newBeer);
