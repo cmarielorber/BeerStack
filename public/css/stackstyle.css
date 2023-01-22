@@ -51,13 +51,13 @@
   
   .mainhbsBody {
   padding-top: 25px;
-  padding-left: 10%;
+  padding-left: 2%;
   }
   
   .beerstackTitle {
     position: relative;
     animation-name: example;
-    animation-duration: 2s;
+    animation-duration: .8s;
   }
   
   
