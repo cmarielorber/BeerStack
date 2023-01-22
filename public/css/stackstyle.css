@@ -68,7 +68,10 @@
   #about-btn{
     background-color: black;
     }
-  
+
+ .aboutHeaders h2{text-decoration: dotted blue;
+    }
+
   @keyframes example {
     0% {
       color: var(--brew);
