@@ -26,19 +26,16 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.put('/:id/increase', async (req, res) => {
+router.put('/:id/increase', withAuth, async (req, res) => {
   try {
-    const currentData = await Beers.findByPk(req.params.id);
-    const updateData = await Beers.update(req.body, {
-      where: {
-        likes: currentData.likes + 1,
-      },
-    });
-    if (!updateData[0]) {
-      res.status(404).json({ message: 'No user with this id!' });
+    const selectedBeer = await Beers.findByPk(req.params.id);
+    if (!selectedBeer) {
+      res.status(404).json({ message: 'There is no beer with this ID!' });
       return;
     }
-    res.status(200).json(updateData);
+    await selectedBeer.increment('likes', {by: 1});
+    const updatedBeer = await Beers.findByPk(req.params.id);
+    res.status(200).json(updatedBeer);
   } catch (err) {
     res.status(500).json(err);
   }
