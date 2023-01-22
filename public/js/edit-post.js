@@ -1,45 +1,29 @@
-const editFormHandler = async (event) => {
-    // Stop the browser from submitting the form so we can do so with JavaScript
+async function editFormHandler(event) {
     event.preventDefault();
-    // Gather the data from the form elements on the page
-    const titlePost = document.getElementById('post-title').value.trim();
-    const bodyPost = document.getElementById('post-body').value.trim();
-    const postID = document.getElementById('post-id').value.trim();
 
-    if (bodyPost) {
-        const response = await fetch(`/api/post/${postID}`, {
-            method: 'PUT',
-            body: JSON.stringify({
-                title: titlePost.value,
-                body: bodyPost.value,
-            }),
-            headers: {'Content-Type': 'application/json'}
-        });
+    const id = window.location.toString().split('/')[
+        window.location.toString().split('/').length - 1
+    ];
 
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert('Failed to log in');
+    const title = document.querySelector('input[name="post-title"]').value;
+    const post_text = document.querySelector('textarea[name="post-text"]').value;
+
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            title,
+            post_text
+        }),
+        headers: {
+            'Content-Type': 'application/json'
         }
-    }
-};
-// const handleSubmit = (btn, postId) => {
-//     btn.addEventListener('click', () => {
-//       const newTitle =
-//         btn.parentNode.parentNode.childNodes[1].childNodes[1].value;
-//       const newBody = btn.parentNode.parentNode.childNodes[3].value;
-  
-//       if (newTitle.length <= 4 || newBody.length <= 4) {
-//         document.getElementById('edit-post-status').style.display = 'flex';
-//         setTimeout(() => {
-//           document.getElementById('edit-post-status').style.display = 'none';
-//         }, 3000);
-//       } else {
-//         editPost(newTitle, newBody, postId);
-//       }
-//     });
-//   };
+    });
 
-document
-    .querySelector('#edit-post-form')
-    .addEventListener('submit', editFormHandler);
+    if (response.ok) {
+        document.location.replace('/dashboard/');
+    } else {
+        alert(response.statusText);
+    }
+}
+
+document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
