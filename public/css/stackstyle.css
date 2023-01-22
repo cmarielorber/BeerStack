@@ -37,7 +37,11 @@
     text-decoration: none;
     color: var(--black);
   }
-  
+
+  .nav-linkmain:hover {
+    color: gold;
+  }
+
   .nav-itemmain {
     margin: 20px;
     border-style: ridge;
