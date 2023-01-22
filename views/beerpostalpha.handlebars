@@ -1,0 +1,33 @@
+
+
+  <article id="searchBrew">
+    <card class="border-top col-sm-12 d-flex justify-content-center">
+     <div class="col-md-10" id="searchBrewStyle">
+          <!-- inside card -->
+     <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+     <div class="text-center">
+      <h2>BEER LIST</h2>
+  <div>
+ 
+<div class="dropdown">
+  <button onclick="dropdownBtn()" class="dropbtn">Filter by:</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/beerpost">The Beerlist</a>
+    <a href="/beerpostlikes">Likes</a>
+  </div>
+</div>
+
+ 
+    <a class="list-item flex-row justify-space-between">
+      <ul>
+        {{#each beers as |beers| }}
+      <li id="beers">{{ name }}</li>
+        {{/each}}
+      </ul>
+    </a>
+
+    <button class="btn btn-primary">we need a button?</button>
+  </p>
+  </div>
+
+   <script src='/js/sort.js'></script>

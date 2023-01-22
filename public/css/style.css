@@ -36,7 +36,7 @@ body {
   font-size: 80px;
   color: var(--brew);
   border-bottom: solid 4px var(--brew);
-  width:100%;
+  width: 100%;
 }
 
 #nav-nav{
@@ -67,7 +67,7 @@ background-color: none;
   font-weight: 600;
 }
 
-.bucketContainer h5 {
+.navContainer h5 {
   color: var(--brew);
   align-content: space-around;
 
@@ -75,7 +75,7 @@ background-color: none;
   align-items: center;
 }
 
-.bucketContainer{
+.navContainer {
   border: dotted 5px var(--brew);
 }
 
@@ -253,7 +253,6 @@ td {
 }
 
 .dropdown {
-  float: right;
   position: relative;
   display: inline-block;
 }
