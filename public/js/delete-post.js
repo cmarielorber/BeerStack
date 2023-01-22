@@ -1,19 +1,22 @@
-async function deleteFormHandler(event){
+const deletePostHandler = async (event) => {
+    // Stop the browser from submitting the form so we can do so with JavaScript
     event.preventDefault();
+    // Gather the data from the form elements on the page
+    const postID = document.getElementById('post-id').value.trim();
 
-    const id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+    if (postID) {
+        const response = await fetch(`/api/post/${postID}`, {
+            method: 'DELETE',
+        });
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to log in');
+        }
+    }
+};
 
-    await fetch(`/api/posts/${id}`, {
-        method: 'DELETE'
-    });
 
-    if (response.ok) {
-        document.location.replace('/dashboard/');
-      } else {
-        alert(response.statusText);
-      } 
-}
-
-document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
+document
+    .querySelector('.delete-post-btn')
+    .addEventListener('click', deleteFormHandler);
