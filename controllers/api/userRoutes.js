@@ -6,7 +6,8 @@ router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
 
-    res.status(200).json(userData);
+    res.json(userData);
+    res.status(200);
   } catch (err) {
     res.status(400).json(err);
 
@@ -17,14 +18,12 @@ router.post('/signup', async (req, res) => {
   try {
     const userData = await User.create(req.body);
     req.session.save(() => {
-      req.session.first_name = userData.first_name;
-      req.session.last_name = userData.last_name;
-      req.session.email = userData.email;
-      req.session.password = userData.password;
-      // req.session.logged_in = true;
-
-      res.status(200).json(userData);
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'You are now logged in!' });
     });
+    res.status(200);
   } catch (err) {
     res.status(400).json(err);
   } 
