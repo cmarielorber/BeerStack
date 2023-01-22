@@ -12,7 +12,7 @@ Full-Stack Bootcamp Project 2
   <img src="https://img.shields.io/badge/-Heroku-purple" />
 </p>
 
-BeerStack is a full-stack CMS-style blog site where it's user can interact with other SoCal Brew users. Once login is authenticated, a user has access to their own dashboard where they can edit, delete and add posts and comments. BeerStack is structured with the MVC paradigm using handlebars, bcrypt, express.sessions, sequelize, and more to create an optimized blogging experience.
+BeerStack is a full-stack CMS-style blog site where it's user can interact with other BeerStack users. Once login is authenticated, a user has access to their own dashboard where they can add beers to their cooler, post, edit, and delete posts and comments. BeerStack is structured with the MVC paradigm using handlebars, bcrypt, express.sessions, sequelize, and more to create an optimized blogging experience.
 
 ## Table of Contents
 
@@ -76,7 +76,6 @@ node server.js
 - bcrypt
 - Heroku
 
-
 ## Technology Links
 
 <a href="https://www.javascript.com/" target="_blank">JavaScript</a>
@@ -105,7 +104,7 @@ node server.js
 
 ## Project Link
 
-[BeerStacj](https://socal-beerstack.herokuapp.com/)
+[BeerStack](https://socal-beerstack.herokuapp.com/)
 
 ## License
 

@@ -16,11 +16,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
 //return all posts associated with the user
 router.get('/', withAuth, async (req, res) => {
     try {
@@ -40,8 +35,6 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-
 //edit post route
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
