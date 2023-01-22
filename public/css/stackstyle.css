@@ -1,0 +1,121 @@
+:root {
+    --brew: #b79b67;
+    --black: #000000;
+    --white: #ffffff;
+    --offwhite: #f0efec;
+    --slate: #3b3b39;
+    --lightgray: #7a7a7a;
+  }
+  
+  .navbar {
+    background-color: var(--black);
+    width: 100%;
+    float: left;
+    position: absolute;
+  }
+  
+  .navbar-brand {
+    font-family: 'Special Elite', cursive;
+    font-size: 50px;
+    color: var(--brew);
+    padding-bottom: 25px;
+  }
+  
+  .mainAside {
+    font-family: 'Special Elite', cursive;
+    font-size: 25px;
+    background-color: var(--slate);
+    height: 1000px;
+  }
+  
+  .sideAside {
+    background-color: var(--lightgray);
+    padding-top: 25px;
+  }
+  
+  .nav-linkmain {
+    text-decoration: none;
+    color: var(--black);
+  }
+  
+  .nav-itemmain {
+    margin: 20px;
+    border-style: ridge;
+    border-top: 100% #000000;
+    border-top-width: 100%;
+    border-bottom: solid var(--black);
+    border-bottom-width: 100%;
+    background-color: var(--brew);
+    color: var(--black)
+  }
+  
+  .mainhbsBody {
+  padding-top: 25px;
+  padding-left: 2%;
+  }
+  
+  .beerstackTitle {
+    position: relative;
+    animation-name: example;
+    animation-duration: .8s;
+  }
+  
+  
+  @keyframes example {
+    0% {
+      color: var(--brew);
+      left: 0px;
+      top: 0px;
+    }
+    10% {
+      color: gold;
+      left: -100px;
+      top: 0px;
+    }
+    20% {
+      color: var(--brew);
+      left: 200px;
+      top: 40px;
+    }
+    30% {
+      color: goldenrod;
+      left: -100px;
+      top: 40px;
+    }
+    40% {
+      color: var(--brew);
+      left: 200px;
+      top: 0px;
+    }
+    50% {
+      color: gold;
+      left: -100px;
+      top: 0px;
+    }
+    60% {
+      color: goldenrod;
+      left: 200px;
+      top: 0px;
+    }
+    70% {
+      color: var(--brew);
+      left: -100px;
+      top: 40px;
+    }
+    80% {
+      color: gold;
+      left: 200px;
+      top: 40px;
+    }
+    90% {
+      color: goldenrod;
+      left: -100px;
+      top: 0px;
+    }
+    100% {
+      color: var(--brew);
+      left: 0px;
+      top: 0px;
+    }
+  }
+  
