@@ -17,21 +17,25 @@
             <div>
               <thead class="table-dark">
                 <tr style="border: 1px solid var(--brew);">
-                  <th scope="col" style="border: 1px solid var(--brew);">Date?</th>
                   <th scope="col" style="border: 1px solid var(--brew);">Title</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Post</th>
                 </tr>
               </thead>
+           
               <tbody>
+              {{#each posts}}
                 <tr>
-                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
-                  <td style="border: 1px solid var(--brew);">Mark</td>
-                </tr>                
+                  <td scope="row" style="border: 1px solid var(--brew);">{{ title }}</td>
+                  <td style="border: 1px solid var(--brew);">{{  post_text }}</td>
+                </tr>
               </tbody>
+              {{/each}}
+              
             </div>
           </table>
           </div>
           <div>
-            <button id="addBrewbtn" href="/">View All Posts</button>
+            {{!-- <button id="addBrewbtn" href="/">View All Posts</button> --}}
           </div>
       </form>
       </div>
@@ -197,6 +201,6 @@
 {{> comments post.comments}}
 </div> --}}
 
-</body>
+{{!-- </body> --}}
 
-<script src='/js/new.js'></script>
+{{!-- <script src='/js/new.js'></script> --}}

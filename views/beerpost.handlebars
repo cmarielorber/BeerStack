@@ -17,7 +17,7 @@
       <tbody>
         {{#each beers}}
         <tr class="table-dark">
-          <th scope="row" style="border: 1px solid var(--brew); text-align: center;color:white">{{name}}</th>
+          <td scope="row" style="border: 1px solid var(--brew); text-align: center;color:white" class="coolerBeerName">{{name}}</td>
           <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td>
           {{#if ../login_status }}
           <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addCoolerBtn">ADD</button></td>
@@ -58,3 +58,4 @@
   </div>
 </article>
 <script src='/js/new-beer-post.js'></script>
+<script src='/js/cooleradd.js'></script>
