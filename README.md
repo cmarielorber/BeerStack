@@ -21,9 +21,8 @@ University of California San Diego Cohort 2022-2023
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-BeerStack is designed to be a full-stack CMS-style blog site where it's user can interact with other
-BeerStack users. Once login is authenticated, a user has access to their own dashboard where they can add beers to their cooler and add posts to the homepage and dashboard. BeerStack is a work in progess and will evntually provide a space where users can comment, edit and delete their posts. 
-BeerStack is structured with the MVC paradigm using handlebars, bcrypt, express.sessions, sequelize, and more to create an optimized blogging experience. BeerStack was inspired by it's parent project [So-Cal Brew Hopper](https://isaacagonzalez.github.io/Bootcamp-Project-1/) which is featured in our homepage. 
+[BeerStack](https://socal-beerstack.herokuapp.com/) is designed to be a full-stack CMS-style blog site where it's user can interact with other users. Once login is authenticated, a user has access to their own dashboard where they can add beers to their cooler and add posts to the homepage and dashboard. [BeerStack](https://socal-beerstack.herokuapp.com/) is a work in progess and will evntually provide a space where users can comment, edit and delete their posts. 
+[BeerStack](https://socal-beerstack.herokuapp.com/) is structured with the MVC paradigm using handlebars, bcrypt, express.sessions, sequelize, and more to create an optimized blogging experience. [BeerStack](https://socal-beerstack.herokuapp.com/) was inspired by it's sister project [So-Cal Brew Hopper](https://isaacagonzalez.github.io/Bootcamp-Project-1/) which is featured in our homepage. 
 
 # Table of Contents
 
@@ -90,7 +89,7 @@ Run the app with:
 ```
 node server.js
 ```
-So-Cal Brew Hopper is still in it's developmental phase and requires CORS access. Please be sure to visit CORS Anywhere to unlock temporary access before entering So-Cal Brew Hopper.
+For those who venture to our parent project, [So-Cal Brew Hopper](https://isaacagonzalez.github.io/Bootcamp-Project-1/) is still in it's developmental phase and requires CORS access. Please be sure to visit [CORS Anywhere](https://cors-anywhere.herokuapp.com/corsdemo) to unlock temporary access before entering [So-Cal Brew Hopper](https://isaacagonzalez.github.io/Bootcamp-Project-1/).
 
 # Technologies Used
 
