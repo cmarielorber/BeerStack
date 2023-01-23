@@ -1,7 +1,7 @@
 const router = require('express').Router();
-// const { Model } = require('sequelize');
-// const { User } = require('../models');
-const Beers = require('../models/Beers');
+const { Model } = require('sequelize');
+const { User, Post } = require('../models');
+// const Beers = require('../models/Beers');
 // const withAuth = require('../utils/auth');
 
 // Render Homepage
@@ -12,6 +12,55 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+
+// Render posts to the home page
+router.get('/', (req, res) => {
+    Post.findAll({
+        // Query configuration
+        // From the Post table, include the post ID, URL, title, and the timestamp from post creation
+        attributes: [
+            'first_name',
+            'title',
+            'post_text',
+            
+          ],
+        // Order the posts from most recent to least
+        order: [[ 'post_text', 'DESC']],
+        // From the User table, include the post creator's first name
+        // From the Comment table, include all comments
+        include: [
+            {
+                model: User,
+                attributes: ['first_name']
+            },
+            //WILL ADD THIS LATER
+            // {
+            //     model: Comment,
+            //     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            //     include: {
+            //         model: User,
+            //         attributes: ['username']
+            //     }
+            // }
+        ]
+    })
+    // render the posts
+    .then(dbPostData => {
+      // create an array for the posts, using the get method to trim extra sequelize object data out
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      // pass the posts into the homepage template
+      res.render('homepage', {
+        posts,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    // if there was a server error, return the error
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 // Render Socal Brew
