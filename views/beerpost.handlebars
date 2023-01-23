@@ -1,66 +1,50 @@
-<article id="searchBrew" class="container-fluid">
-  <card class="border-top d-flex justify-content-center container-fluid">
-    <div class="card w-100 container-fluid" id="searchBrewStyle">
-      <!-- inside card -->
-      <div class="mt-3 rounded">
-        <div class="text-center">
-          <h2>BEER LIST</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Beer I Like </button>
-        </div>
-        <div class="col">
-          <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Filter by:</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Name</a>
-              <a href="#about">Likes</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Beer Name</th>
-            <th scope="col">Total Likes</th>
-            <th scope="col">Add to your Cooler</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each beers as |beers| }}
-          <tr>
-            <td>{{ name }}</td>
-            <td>{{ likes }}</td>
-            <td><button>Add to your cooler</button></td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
-        
-      </div>
+<div class="p-3" style="border: 2px ridge var(--brew); background-color:var(--offbg)">
+  <div class="mb-3">
+    <h2 class="beerstackTitle" style="color:var(--brew); display:flex; justify-content:center">Beer List</h2>
     </div>
-  </card>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+  <div class="mb-3">
+    <table class="table">
+    <div>
+      <thead class="table-dark">
+        <tr style="border: 1px solid var(--brew);">
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Beer : </th>
+          <th scope="col" style="border-left: 1px solid var(--brew); border-right: 1px solid var(--brew); text-align: center; color:var(--brew);">Likes : </th>
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Cooler ? :</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each beers as |beers| }}  
+        <tr class="table-dark">
+          <th scope="row" style="border: 1px solid var(--brew); text-align: center;color:white">{{name}}</th>
+          <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td>
+          <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addcoolerBtn">ADD</button></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </div>
+  </table>
+  </div>
+  <div style="display: flex; justify-content:center;">
+    <button id="addBrewbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display: flex; justify-content:center"> ++ Add a Beer to Beerstack's Beerlist ++</button>
+  </div>
 
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Favorite Brew</h1>
+{{!-- modal --}}
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="background-color: var(--black);">
+      <div class="modal-content" style="background-color: var(--offbg);">
+
+        <div class="modal-header" style="background-color:var(--black); color:var(--brew)">
+          <h1 class="modal-title fs-1" id="exampleModalLabel">Brewstack Beerlist</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <div class="modal-body">
           <form class='newBeer-form' id='newBeer-form'>
-            <input id='beer-input-add' for='beer-input-add' type='text' name='txt' placeholder='Enter Beer Here'
+            <input id='beer-input-add' class="fs-6" style="background-color:var(--brew)" for='beer-input-add' type='text' name='txt' placeholder='Add to Beerstack's Beerlist here...'
               required='' />
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nevermind</button>
-              <button type="submit" class="btn btn-primary" onclick="newBeerHandler()">Add It</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-dark" style="background-color:var(--brew); color: white" onclick="newBeerHandler()">Add It</button>
             </div>
           </form>
         </div>
