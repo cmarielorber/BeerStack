@@ -68,6 +68,10 @@
   color: gold;
 }
 
+#logout-link{
+  cursor:pointer;
+}
+
 .nav-itemmain:hover {
   color: gold;
 }
