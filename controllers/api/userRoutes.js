@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // remove before final
 router.get('/', async (req, res) => {
@@ -11,6 +12,21 @@ router.get('/', async (req, res) => {
   } catch (err) {
     res.status(400).json(err);
 
+  }
+})
+
+router.get('/currentUserCooler', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: {
+        exclude: ['password']
+      }
+    });
+
+    res.json(userData.cooler);
+    res.status(200);
+  } catch (err) {
+    res.status(400).json(err);
   }
 })
 

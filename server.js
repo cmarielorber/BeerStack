@@ -31,8 +31,6 @@ const sess = {
   })
 };
 
-console.log("hello");
-
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
 
