@@ -1,4 +1,4 @@
-<div style="background-color: var(--offbg); height: 50px; margin-bottom: 50px; margin-top: 20px; margin-right: 50px"; >
+<div style="background-color: var(--offbg); height: 50px; margin-bottom: 50px; margin-top: 20px; margin-right: 50px" ;>
   <h1 class="beerstackTitle" style="display: flex; justify-content:center; color: var(--brew);">
     Welcome to your Dashboard
   </h1>
@@ -24,182 +24,85 @@
         <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
           <div class="mb-3">
             <label for="post-title" style="color:var(--brew)">Post Title:</label>
-            <input type="text" id="post-title" name="post-title" class="form-control" placeholder="Beerstack Post Title" style="background-color: var(--brew); border: 2px ridge var(--brew)">
+            <input type="text" id="post-title" name="post-title" class="form-control" placeholder="Beerstack Post Title"
+              style="background-color: var(--brew); border: 2px ridge var(--brew)">
           </div>
           <div class="mb-3">
             <label for="post-text" style="color:var(--brew)">Your Beer Post:</label>
-            <textarea id="post-text" name="post-text" class="form-control" style="background-color: var(--brew); border: 2px ridge var(--brew);" rows="8" placeholder="Add your thoughts to BEERSTACK..."></textarea>
+            <textarea id="post-text" name="post-text" class="form-control"
+              style="background-color: var(--brew); border: 2px ridge var(--brew);" rows="8"
+              placeholder="Add your thoughts to BEERSTACK..."></textarea>
           </div>
           <button type="submit" class="btn" style="color:var(--brew)">🍺Add to BeerStack🍺</button>
       </form>
 
-      </div>
     </div>
-    <div class="col-6">
-      <div>
-        <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
-          <table class="table">
-            <div>
-              <h2 style="color: var(--brew);">Your Beerstack Posts</h2>
-              <thead class="table-dark">
-                <tr style="border: 1px solid var(--brew);">
-                  <th scope="col" style="border: 1px solid var(--brew);">Date</th>
-                  <th scope="col" style="border: 1px solid var(--brew);">Title</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
-                  <td style="border: 1px solid var(--brew);">Mark</td>
-                </tr>
-                
-              </tbody>
-            </div>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div>
-        <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
-          <table class="table">
-            <div>
-              <h2 style="color: var(--brew);">Your Cooler</h2>
-              <thead class="table-dark">
-                <tr style="border: 1px solid var(--brew);">
-                  <th scope="col" style="border: 1px solid var(--brew);">Beer Name</th>
-                  <th scope="col" style="border: 1px solid var(--brew);">Total Likes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {{#each coolerData}}
-                <tr id="beerLine">
-                  <td style="color: white; border: 1px solid var(--brew);"><Button id="removeFromCooler">X</Button>  {{ name }}</td>
-                  <td style="color: white; border: 1px solid var(--brew);">{{ likes }}</td>
-                </tr>
-                {{/each}}
-                
-              </tbody>
-            </div>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6" style="margin-top: 30px;">
+  </div>
+  <div class="col-6">
+    <div>
       <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
-        <div>
-          <div class="mb-3" style="border: 1px ridge var(--brew); padding: 25px">
-            <label for="exampleFormControlInput1" class="fs-5 form-label" style="color:var(--brew); text-decoration:underline">So-Cal Brewery's</label>
-            <p class="fs-1"style="color: var(--brew); text-decoration:underline">Bucket List</p>
-            <p class="fs-6"style="color: var(--brew);">New Bucket List feature from So-Cal Brewery coming soon!</p>
-          
-        </div>
+        <table class="table">
+          <div>
+            <h2 style="color: var(--brew);">Your Beerstack Posts</h2>
+            <thead class="table-dark">
+              <tr style="border: 1px solid var(--brew);">
+                <th scope="col" style="border: 1px solid var(--brew);">Date</th>
+                <th scope="col" style="border: 1px solid var(--brew);">Title</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each userPosts}}
+              <tr>
+                <td style="color: white; border: 1px solid var(--brew);">{{ title }}</td>
+                <td style="color: white; border: 1px solid var(--brew);">{{ post_text }}</td>
+              </tr>
+              {{/each}}
+
+            </tbody>
+          </div>
+        </table>
+      </div>
     </div>
-</div>
   </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-{{!--
-
-<body>
-  <div class="border row m-2 p-2 justify-content-center">
-    <div id="newpost" class="col-sm-4 p-2">
-      <h1 class="border rounded p-2">
-        <a class="border rounded p-1" href="/dashboard" style="text-decoration: none;
-          color: var(--brew);"></a>
-      </h1>
-      <p>----- dashboard {{ login_status }} --------</p>
-      <div>{{> new-post}}</div>
-    </div> --}}
-    {{!-- <div id="newpost" class="col-sm-4 border">
-      <h2 class="border rounded p-2" style="color: var(--brew);">New Beer Post</h2>
-
-      <form class="new-post-form">
-        <div>
-          <label for="post-title" style="color: var(--brew);">Title</label>
-          <input type="text" id="post-title" name="post-title" />
-        </div>
-        <div>
-          <label for="post-text" style="color: var(--brew);">Content</label>
-          <textarea id="post-text" name="post-text"></textarea>
-        </div>
-        <button type="submit" class="btn" style="color: var(--brew);">🍺 Beer Post </button>
-      </form>
-    </div>
-    {{#if posts.length}}
-    <section>
-      <h2>Your Posts</h2>
-      <ol>
-        {{#each posts as |post|}}
-        <li>
-          {{> post-info post}}
-          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
-        </li>
-        {{/each}}
-      </ol>
-    </section>
-    {{/if}}
-
-
-    <div id="newpost" class="col-sm-4 border">
-      <h1 class="border rounded p-2" style="color: var(--brew);">
-        Your Posts
-      </h1>
-      {{#each users as |user| }}
-      <p style="color: var(--brew);">
-        {{ first_name }}
-      </p>
-      {{/each}}
-
-    </div>
-    <div id="newpost" class="col-sm-4 border">
-      <h1 class="border rounded p-2" style="color: var(--brew);">
-        Your Cooler!
-      </h1>
-      <p>data goes here</p>
-    </div>
-  </div> --}}
-  {{!-- <div>
-  <article>
-  <a href="/dashboard">&larr; Back to Dashboard</a>
-  <h2>Edit Post</h2>
-  <form class="edit-post-form">
+  <div class="col-6">
     <div>
-      <input type="text" name="post-title" value="{{post.title}}" />
-      <br><br>
-      <textarea id="post-text" name="post-text"></textarea>
-      <p>{{post.post_text}}</p>
+      <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
+        <table class="table">
+          <div>
+            <h2 style="color: var(--brew);">Your Cooler</h2>
+            <thead class="table-dark">
+              <tr style="border: 1px solid var(--brew);">
+                <th scope="col" style="border: 1px solid var(--brew);">Beer Name</th>
+                <th scope="col" style="border: 1px solid var(--brew);">Total Likes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each coolerData}}
+              <tr id="beerLine">
+                <td style="color: white; border: 1px solid var(--brew);"><Button id="removeFromCooler">X</Button> {{
+                  name }}</td>
+                <td style="color: white; border: 1px solid var(--brew);">{{ likes }}</td>
+              </tr>
+              {{/each}}
+
+            </tbody>
+          </div>
+        </table>
+      </div>
     </div>
-    <div>
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+  </div>
+  <div class="col-xs-6" style="margin-top: 30px;">
+    <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
+      <div>
+        <div class="mb-3" style="border: 1px ridge var(--brew); padding: 25px">
+          <label for="exampleFormControlInput1" class="fs-5 form-label"
+            style="color:var(--brew); text-decoration:underline">So-Cal Brewery's</label>
+          <p class="fs-1" style="color: var(--brew); text-decoration:underline">Bucket List</p>
+          <p class="fs-6" style="color: var(--brew);">New Bucket List feature from So-Cal Brewery coming soon!</p>
+
+        </div>
+      </div>
     </div>
-    <button type="submit">Save Post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
-  </form>
-</article>
-
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
   </div>
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
-{{> comments post.comments}}
-</div> --}}
-
-</body>
-
+</div>
 <script src='/js/new.js'></script>
