@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
   try {
-    res.render('socalbrew', {});
+    const login_status = req.session.logged_in;
+    res.render('socalbrew', {  login_status });
   } catch (err) {
     res.status(500).json(err);
   }

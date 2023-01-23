@@ -5,6 +5,7 @@
   --offwhite: #f0efec;
   --slate: #3b3b39;
   --lightgray: #7a7a7a;
+  --offbg: rgb(95, 90, 90);
 }
 
 .navbar {
@@ -25,11 +26,11 @@
   font-family: 'Special Elite', cursive;
   font-size: 25px;
   background-color: var(--slate);
-  height: 1000px;
+  height: 250vh;
 }
 
 .sideAside {
-  background-color: var(--lightgray);
+  background-color: var(--offbg);
   padding-top: 25px;
 }
 
@@ -85,15 +86,29 @@
   text-decoration: dotted blue;
 }
 
-#searchBrewbtn {
+#addBrewbtn {
   font-family: 'Special Elite', cursive;
   background-color: var(--brew);
   height: 40px;
   font-size: 20px;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 5px;
   border-radius: 5px;
+  width: 500px;
 }
+
+#addcoolerBtn {
+  font-family: 'Special Elite', cursive;
+  background-color: var(--brew);
+  height: 40px;
+  font-size: 20px;
+  align-items: center;
+  padding-top: 5px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+
 @keyframes example {
   0% {
     color: var(--brew);
