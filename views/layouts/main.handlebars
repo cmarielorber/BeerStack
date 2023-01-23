@@ -1,5 +1,4 @@
 <html lang='en'>
-
   <head>
     <meta charset='UTF-8' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
@@ -33,7 +32,7 @@
     <header>{{> nav-bar login_status=login_status }}</header>
     <body>
       <div class="mainAside row">
-          <div class="sideAside col-lg-2">
+          <div class="sideAside col-lg-2" style="border: 2px ridge var(--brew)">
               <ul class="nav flex-column text-center">
               <li class="nav-itemmain">
                 <a class="nav-linkmain" href="/">Home</a>
@@ -50,7 +49,7 @@
               {{#if login_status}}
               <li class="nav-itemmain" id='logout-link'>
                 <a
-                style='text-decoration: none; color: var(--brew);'
+                style='text-decoration: none;'
                 id='logout-link'
                 >Logout
                 </a>
@@ -74,10 +73,9 @@
       ></script>
       <script src='/js/script.js'></script>
       <script src='/js/logout.js'></script>
-
-
     </body>
-          <button
+    <footer>
+      <button
         id='about-btn'
         class='btn fixed-bottom'
         type='button'
@@ -85,19 +83,18 @@
         data-bs-target='#offcanvasWithBothOptions'
         aria-controls='offcanvasWithBothOptions'
         style='color:var(--brew)'
-      >About Us</button>
+      >About Us
+      </button>
       <div
         class='offcanvas offcanvas-end'
         data-bs-scroll='true'
         tabindex='-1'
         id='offcanvasWithBothOptions'
-        aria-labelledby='offcanvasWithBothOptionsLabel'
+        style="background-color: black; color:var(--brew);"
       >
         <div class='offcanvas-header'>
-          <h5
-            class='offcanvas-title'
-            id='offcanvasWithBothOptionsLabel'
-          >About BrewStack</h5>
+          <h2 
+          >About BrewStack</h2>
           <button
             type='button'
             class='btn-close'
@@ -106,13 +103,13 @@
           ></button>
         </div>
         <div class='offcanvas-body'>
-      <h2 class='pt-3'>The Team</h2>
+      <h2>The Team</h2>
             <p class='lead'>Isaac Gonzalez</p>
             <p class='lead'>Christen Lorber</p>
             <p class='lead'>Louis Yoon</p>
 
           <div>
-            <h2 class='pt-3'>The App</h2>
+            <h2>The App</h2>
             <p class='lead'>
               So-Cal Brew Hopper is an interactive tool that allows the
               User to search for desired breweries in the San Diego area
@@ -124,23 +121,16 @@
             </p>
           </div>
           <div>
-            <h2 class='pt-3'>Resources</h2>
+            <h2>Resources</h2>
             <p class='lead'>
               HTML, CSS, JavaScript, JQuery, Bootstrap, GitHub, Bootcamp
               Instructional Team
             </p>
         </div>
-      </div>
-    </div>
-  </div>
-
-    </aside>
-  <script src='/js/logout.js'></script>
-</body>
-
-    </main>
-    
-  </html>
+    </footer>
+  </main>
+  
+</html>
 
 {{!-- <html lang='en'>
 

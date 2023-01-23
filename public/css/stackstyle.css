@@ -37,7 +37,11 @@
     text-decoration: none;
     color: var(--black);
   }
-  
+
+  .nav-linkmain:hover {
+    color: gold;
+  }
+
   .nav-itemmain {
     margin: 20px;
     border-style: ridge;
@@ -53,14 +57,25 @@
   padding-top: 25px;
   padding-left: 2%;
   }
-  
+
+  .logsignBtn {
+    text-decoration: none;
+    color: var(--black);
+  }
+
   .beerstackTitle {
     position: relative;
     animation-name: example;
     animation-duration: .8s;
   }
   
-  
+  #about-btn{
+    background-color: black;
+    }
+
+ .aboutHeaders h2{text-decoration: dotted blue;
+    }
+
   @keyframes example {
     0% {
       color: var(--brew);
