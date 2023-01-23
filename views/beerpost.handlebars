@@ -10,7 +10,7 @@
           <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Beer: </th>
           <th scope="col" style="border-left: 1px solid var(--brew); border-right: 1px solid var(--brew); text-align: center; color:var(--brew);">Likes : </th>
           {{#if login_status }}
-          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">-{{ login_status }}- Cooler:</th>
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Cooler:</th>
           {{/if}}
         </tr>
       </thead>
@@ -20,11 +20,7 @@
           <th scope="row" style="border: 1px solid var(--brew); text-align: center;color:white">{{name}}</th>
           <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td>
           {{#if ../login_status }}
-            {{#if check_cooler (../beers ../../coolerList) }}
-            <td style="border: 1px solid var(--brew); text-align: center;color:white">if came thru --{{ ../login_status }}--<button id="removeCoolerBtn">REMOVE</button></td>
-            {{else}}
-            <td style="border: 1px solid var(--brew); text-align: center;color:white">else came thru --{{ ../login_status }}--<button id="addCoolerBtn">ADD</button></td>
-            {{/if}}
+          <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addCoolerBtn">ADD</button></td>
           {{/if}}
         </tr>
         {{/each}}
