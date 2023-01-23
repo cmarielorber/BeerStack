@@ -105,6 +105,7 @@ node server.js
 ## Project Link
 
 [BeerStack](https://socal-beerstack.herokuapp.com/)
+[BeerStack Presentation](https://docs.google.com/presentation/d/15hSn8MMS_9yVPyyFyTjIasWqzz-44rC4soTjx3Zvu4k/edit?usp=sharing)
 
 ## License
 
