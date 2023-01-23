@@ -68,17 +68,16 @@
               <thead class="table-dark">
                 <tr style="border: 1px solid var(--brew);">
                   <th scope="col" style="border: 1px solid var(--brew);">Beer Name</th>
-                  <th scope="col" style="border: 1px solid var(--brew);">Title</th>
-                  <th scope="col" style="border: 1px solid var(--brew);">Likes</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Total Likes</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
-                  <td style="border: 1px solid var(--brew);">Mark</td>
-                  <td style="border: 1px solid var(--brew);">Otto</td>
-                  <td style="border: 1px solid var(--brew);">@mdo</td>
+                {{#each coolerData}}
+                <tr id="beerLine">
+                  <td style="color: white; border: 1px solid var(--brew);"><Button id="removeFromCooler">X</Button>  {{ name }}</td>
+                  <td style="color: white; border: 1px solid var(--brew);">{{ likes }}</td>
                 </tr>
+                {{/each}}
                 
               </tbody>
             </div>

@@ -39,12 +39,10 @@ User.init(
         len: [8],
       },
     },
-    friendlist: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'friends',
-        key: 'id',
-      },
+    cooler: {
+      type: DataTypes.JSON,
+      allowNull: false,
+      defaultValue: [],
     },
   },
   {
