@@ -1,183 +1,104 @@
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>BeerStack</title>
-    <link
-      rel='stylesheet'
-      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
-      integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi'
-      crossorigin='anonymous'
-    />
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <link rel='stylesheet' href='../css/stackstyle.css' />
-     {{!-- <link rel="stylesheet" href="./assets/cs/style.css" /> --}}
-    {{!-- <link rel='stylesheet' href='../css/custom.css' /> --}}
-    <script
-      src='https://kit.fontawesome.com/93df6eac37.js'
-      crossorigin='anonymous'
-    ></script>
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='' />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'
-      rel='stylesheet'
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
 
-  <main>
-    <header>{{> nav-bar login_status=login_status }}</header>
-    <body>
-      <div class="mainAside row">
-          <div class="sideAside col-lg-2" style="border: 2px ridge var(--brew)">
-              <ul class="nav flex-column text-center">
-              <li class="nav-itemmain">
-                <a class="nav-linkmain" href="/">Home</a>
-              </li>
-              <li class="nav-itemmain">
-                <a class="nav-linkmain" href="/dashboard">Dashboard</a>
-              </li>
-              <li class="nav-itemmain">
-                <a class="nav-linkmain" href="/beerpost">Brewclopedia</a>
-              </li>
-              <li class="nav-itemmain">
-                <a class="nav-linkmain" href="/socalbrew">So Cal Brewery</a>
-              </li>
-              {{#if login_status}}
-              <li class="nav-itemmain" id='logout-link'>
-                <a
-                style='text-decoration: none;'
-                id='logout-link'
-                >Logout
-                </a>
-              </li>
-              {{/if}}        
-            </ul>
-          </div>
-          <div class="col-lg-10">
-            <div class="mainhbsBody">
-              {{{body}}}
-            </div>
-          </div>
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>BeerStack</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
+    integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous' />
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link rel='stylesheet' href='../css/stackstyle.css' />
+  {{!--
+  <link rel="stylesheet" href="./assets/cs/style.css" /> --}}
+  {{!--
+  <link rel='stylesheet' href='../css/custom.css' /> --}}
+  <script src='https://kit.fontawesome.com/93df6eac37.js' crossorigin='anonymous'></script>
+  <link rel='preconnect' href='https://fonts.googleapis.com' />
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='' />
+  <link href='https://fonts.googleapis.com/css2?family=Special+Elite&display=swap' rel='stylesheet' />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<main>
+  <header>{{> nav-bar login_status=login_status }}</header>
+
+  <body>
+    <div class="mainAside row">
+      <div class="sideAside col-lg-2" style="border: 2px ridge var(--brew)">
+        <ul class="nav flex-column text-center">
+          <li class="nav-itemmain">
+            <a class="nav-linkmain" href="/">Home</a>
+          </li>
+          <li class="nav-itemmain">
+            <a class="nav-linkmain" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-itemmain">
+            <a class="nav-linkmain" href="/beerpost">Brewclopedia</a>
+          </li>
+          <li class="nav-itemmain">
+            <a class="nav-linkmain" href="/socalbrew">So Cal Brewery</a>
+          </li>
+          {{#if login_status}}
+          <li class="nav-itemmain" id='logout-link'>
+            <a style='text-decoration: none;' id='logout-link'>Logout
+            </a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+      <div class="col-lg-10">
+        <div class="mainhbsBody">
+          {{{body}}}
         </div>
       </div>
-
-      <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-      <script
-        src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'
-        integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3'
-        crossorigin='anonymous'
-      ></script>
-      <script src='/js/script.js'></script>
-      <script src='/js/logout.js'></script>
-    </body>
-    <footer>
-      <button
-        id='about-btn'
-        class='btn fixed-bottom'
-        type='button'
-        data-bs-toggle='offcanvas'
-        data-bs-target='#offcanvasWithBothOptions'
-        aria-controls='offcanvasWithBothOptions'
-        style='color:var(--brew)'
-      >About Us
-      </button>
-      <div
-        class='offcanvas offcanvas-end'
-        data-bs-scroll='true'
-        tabindex='-1'
-        id='offcanvasWithBothOptions'
-        style="background-color: black; color:var(--brew);"
-      >
-        <div class='offcanvas-header'>
-          <h2 
-          >About BrewStack</h2>
-          <button
-            type='button'
-            class='btn-close'
-            data-bs-dismiss='offcanvas'
-            aria-label='Close'
-          ></button>
-        </div>
-        <div class='offcanvas-body'>
-      <h2>The Team</h2>
-            <p class='lead'>Isaac Gonzalez</p>
-            <p class='lead'>Christen Lorber</p>
-            <p class='lead'>Louis Yoon</p>
-
-          <div>
-            <h2>The App</h2>
-            <p class='lead'>
-              So-Cal Brew Hopper is an interactive tool that allows the
-              User to search for desired breweries in the San Diego area
-              and turn their destination into a custom User bucket list.
-              This will allow the User to actively track which breweries
-              they have yet to visit, as well as remove them once their
-              visit is completed. If the User is looking to stay in for
-              the night, the app provides a featured cocktail recipe.
-            </p>
-          </div>
-          <div>
-            <h2>Resources</h2>
-            <p class='lead'>
-              HTML, CSS, JavaScript, JQuery, Bootstrap, GitHub, Bootcamp
-              Instructional Team
-            </p>
-        </div>
-    </footer>
-  </main>
-  
-</html>
-
-{{!-- <html lang='en'>
-
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>BeerStack</title>
-    <link
-      rel='stylesheet'
-      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
-      integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi'
-      crossorigin='anonymous'
-    />
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <link rel='stylesheet' href='../css/style.css' />
-    <link rel='stylesheet' href='../css/custom.css' />
-    <script
-      src='https://kit.fontawesome.com/93df6eac37.js'
-      crossorigin='anonymous'
-    ></script>
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin='' />
-    <link
-      href='https://fonts.googleapis.com/css2?family=Special+Elite&display=swap'
-      rel='stylesheet'
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-
-  <body class='bg-dark d-flex flex-column'>
-     {{> nav-bar login_status=login_status }}
-    <main style="width: 75%" class="d-flex justify-content-center">
-     {{{body}}}
-    </main>
+    </div>
+    </div>
 
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-    <script
-      src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'
       integrity='sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3'
-      crossorigin='anonymous'
-    ></script>
+      crossorigin='anonymous'></script>
     <script src='/js/script.js'></script>
+    <script src='/js/logout.js'></script>
   </body>
-  
+  <footer>
+    <button id='about-btn' class='btn fixed-bottom' type='button' data-bs-toggle='offcanvas'
+      data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions'
+      style='color:var(--brew)'>About Us
+    </button>
+    <div class='offcanvas offcanvas-end' data-bs-scroll='true' tabindex='-1' id='offcanvasWithBothOptions'
+      style="background-color: black; color:var(--brew);">
+      <div class='offcanvas-header'>
+        <h2>About BrewStack</h2>
+        <button type='button' class='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'></button>
+      </div>
+      <div class='offcanvas-body'>
+        <h2>The Team</h2>
+        <p><a class='lead' href="https://github.com/IsaacAGonzalez">Isaac Gonzalez</a></p>
+        <p class='lead' href="https://github.com/cmarielorber">Christen Lorber</a></p>
+        <p class='lead' href="https://github.com/louyoon89">Louis Yoon</a></p>
+
+        <div>
+          <h2>The App</h2>
+          <p class='lead'>
+            BeerStack is designed to be a full-stack CMS-style blog site where it's user can interact with other
+            BeerStack users. Once login is authenticated, a user has access to their own dashboard where they can add beers to their cooler and add posts to the homepage and dashboard. beerStack is a work in progess and will evntually
+            provide a space where users can comment, edit and delete their posts. BeerStack is structured with the MVC
+            paradigm using handlebars, bcrypt, express.sessions, sequelize, and more to create an optimized blogging
+            experience.
+            BeerStack was inspired by it's parent project SoCal-Brew which is featured in our homepage. 
+          </p>
+        </div>
+        <div>
+          <h2>Resources</h2>
+          <p class='lead'>
+            HTML, CSS, JavaScript, JQuery, Bootstrap, Node.js, Express.js, Handlebars.js, Heroku, GitHub, Bootcamp Instructional Team
+          </p>
+        </div>
+  </footer>
+</main>
+
 </html>
- --}}
