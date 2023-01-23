@@ -73,11 +73,13 @@
             <div>
               <label for="exampleFormControlInput1" class="form-label" style="color:var(--brew);">Top 5 Beers</label>
               <thead class="table-dark">
+                {{#each posts}}
                 <tr style="border: 1px solid var(--brew);">
                   <th scope="col" style="border: 1px solid var(--brew);">Beer Name</th>
                   <th scope="col" style="border: 1px solid var(--brew);">Title</th>
                   <th scope="col" style="border: 1px solid var(--brew);">Likes</th>
                 </tr>
+                {{/each}}
               </thead>
               <tbody>
                 <tr>
