@@ -37,8 +37,8 @@ University of California San Diego Cohort 2022-2023
 
 # Screenshot
 
-![mvc-tech-blog-lorber herokuapp com_login](https://user-images.githubusercontent.com/109984761/212177854-ba093041-78cf-4ebf-b985-8252f2402531.png)
-![mvc-tech-blog-lorber herokuapp com_dashboard](https://user-images.githubusercontent.com/109984761/212178106-3e77bf04-6bb3-4f09-9dce-f96ff7988046.png)
+![Screenshot (111)](https://user-images.githubusercontent.com/109984761/213993446-bf4c6726-af4a-48c5-a96e-4f387cb1eeec.png)
+![BeerStack Brewclopedia](https://user-images.githubusercontent.com/109984761/213993468-987a92bf-ebf7-4753-bb41-b8251051ab9c.png)
 
 # Project Requirements
 * Use Node.js and Express.js to create a RESTful API.
