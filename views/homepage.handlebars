@@ -1,101 +1,190 @@
-<div class="grid text-center" style="--bs-columns: 3;">
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Top 5 Beers</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="/beerpost" class="btn btn-primary">Go somewhere</a>
+<div class="container text-center">
+  <div class="row g-2">
+    <div class="col-xs-6">
+      <form>
+        <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" style="color:var(--brew);">Top 5 Posts</label>
+            </div>
+          <div class="mb-3">
+            <table class="table">
+            <div>
+              <thead class="table-dark">
+                <tr style="border: 1px solid var(--brew);">
+                  <th scope="col" style="border: 1px solid var(--brew);">Date?</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Title</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
+                  <td style="border: 1px solid var(--brew);">Mark</td>
+                </tr>
+                
+              </tbody>
+            </div>
+          </table>
+          </div>
+          <button id="searchBrewbtn" href="/">View All Posts</button>
+      </form>
+      </div>
     </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Top 5 Posts</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="col-6">
+      <div>
+        <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
+          <table class="table">
+            <div>
+              <label for="exampleFormControlInput1" class="form-label" style="color:var(--brew);">Recent Posts</label>
+              <thead class="table-dark">
+                <tr style="border: 1px solid var(--brew);">
+                  <th scope="col" style="border: 1px solid var(--brew);">Date?</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Title</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
+                  <td style="border: 1px solid var(--brew);">Mark</td>
+                </tr>
+                
+              </tbody>
+            </div>
+          </table>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Recent Posts</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="col-6">
+      <div>
+        <div class="p-3 bg-dark" style="border: 2px ridge var(--brew);">
+          <table class="table">
+            <div>
+              <label for="exampleFormControlInput1" class="form-label" style="color:var(--brew);">Top 5 Beers</label>
+              <thead class="table-dark">
+                <tr style="border: 1px solid var(--brew);">
+                  <th scope="col" style="border: 1px solid var(--brew);">Beer Name</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Title</th>
+                  <th scope="col" style="border: 1px solid var(--brew);">Likes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" style="border: 1px solid var(--brew);">1</th>
+                  <td style="border: 1px solid var(--brew);">Mark</td>
+                  <td style="border: 1px solid var(--brew);">Otto</td>
+                  <td style="border: 1px solid var(--brew);">@mdo</td>
+                </tr>
+                
+              </tbody>
+            </div>
+          </table>
+        </div>
+      </div>
     </div>
+</div>
   </div>
 </div>
 
 
-{{!-- //what they see when they signup nad connect to new post and edit/delete posts// --}}
 
 
-{{!-- <article id="searchBrew">
-  <card class="border-top col-sm-12 d-flex justify-content-center">
-    <div class="col-md-10" id="searchBrewStyle">
-      <!-- inside card -->
-      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <ol class="post-list">
-          {{#each posts as |post|}}
-          <li>
-            {{> post-info post}}
-          </li>
-          {{/each}}
-        </ol> --}}
-        {{!-- {{#if projects.length}}
-        <div class="col-md-6 project-list">
-          <h3>Current Projects:</h3>
 
-          {{#each projects as |project|}}
-          <div class="row mb-2">
-            <div class="col-md-8">
-              <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-            </div>
-            <div class="col-md-4">
-              <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-            </div>
-          </div>
-          {{/each}}
+
+
+
+
+
+
+{{!--
+
+<body>
+  <div class="border row m-2 p-2 justify-content-center">
+    <div id="newpost" class="col-sm-4 p-2">
+      <h1 class="border rounded p-2">
+        <a class="border rounded p-1" href="/dashboard" style="text-decoration: none;
+          color: var(--brew);"></a>
+      </h1>
+      <p>----- dashboard {{ login_status }} --------</p>
+      <div>{{> new-post}}</div>
+    </div> --}}
+    {{!-- <div id="newpost" class="col-sm-4 border">
+      <h2 class="border rounded p-2" style="color: var(--brew);">New Beer Post</h2>
+
+      <form class="new-post-form">
+        <div>
+          <label for="post-title" style="color: var(--brew);">Title</label>
+          <input type="text" id="post-title" name="post-title" />
         </div>
-        {{/if}}
-      </div> --}}
-    {{!-- </div>
+        <div>
+          <label for="post-text" style="color: var(--brew);">Content</label>
+          <textarea id="post-text" name="post-text"></textarea>
+        </div>
+        <button type="submit" class="btn" style="color: var(--brew);">🍺 Beer Post </button>
+      </form>
     </div>
-  </card>
+    {{#if posts.length}}
+    <section>
+      <h2>Your Posts</h2>
+      <ol>
+        {{#each posts as |post|}}
+        <li>
+          {{> post-info post}}
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+        </li>
+        {{/each}}
+      </ol>
+    </section>
+    {{/if}}
+
+
+    <div id="newpost" class="col-sm-4 border">
+      <h1 class="border rounded p-2" style="color: var(--brew);">
+        Your Posts
+      </h1>
+      {{#each users as |user| }}
+      <p style="color: var(--brew);">
+        {{ first_name }}
+      </p>
+      {{/each}}
+
+    </div>
+    <div id="newpost" class="col-sm-4 border">
+      <h1 class="border rounded p-2" style="color: var(--brew);">
+        Your Cooler!
+      </h1>
+      <p>data goes here</p>
+    </div>
+  </div> --}}
+  {{!-- <div>
+  <article>
+  <a href="/dashboard">&larr; Back to Dashboard</a>
+  <h2>Edit Post</h2>
+  <form class="edit-post-form">
+    <div>
+      <input type="text" name="post-title" value="{{post.title}}" />
+      <br><br>
+      <textarea id="post-text" name="post-text"></textarea>
+      <p>{{post.post_text}}</p>
+    </div>
+    <div>
+      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    <button type="submit">Save Post</button>
+    <button type="button" class="delete-post-btn">Delete post</button>
+  </form>
 </article>
 
-<article id="searchBrew">
-  <card class="border-top col-sm-12 d-flex justify-content-center">
-    <div class="col-md-10" id="searchBrewStyle">
-      <!-- inside card -->
-      <div class="mt-3 row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <h2>POSTS ABOUT STUFFF</h2>
-        <ul>
-          <li>1blah</li>
-          <li>2blah</li>
-          <li>3blah</li>
-          <li>4blah</li>
-          <li>5blah</li>
-        </ul> --}}
-        {{!-- {{#if projects.length}}
-        <div class="col-md-6 project-list">
-          <h3>Current Projects:</h3>
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
 
-          {{#each projects as |project|}}
-          <div class="row mb-2">
-            <div class="col-md-8">
-              <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-            </div>
-            <div class="col-md-4">
-              <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-            </div>
-          </div>
-          {{/each}}
-        </div>
-        {{/if}}
-      </div> --}}
-    {{!-- </div>
-    </div>
-  </card>
-</article> --}}
+{{> comments post.comments}}
+</div> --}}
 
-<script src="/js/comment"></script>
+</body>
+
+<script src='/js/new.js'></script>
