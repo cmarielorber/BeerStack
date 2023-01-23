@@ -3,18 +3,21 @@
     "first_name": "John",
     "last_name": "Wick",
     "email": "babayaga@continental.com",
-    "password": "password12345"
+    "password": "password12345",
+    "cooler": [1,2,3,4]
   },
   {
     "first_name": "Dwayne",
     "last_name": "Johnson",
     "email": "therock@wwe.com",
-    "password": "password12345"
+    "password": "password12345",
+    "cooler": [1,2,3,4,5,6]
   },
   {
     "first_name": "Ronald",
     "last_name": "McDonald",
     "email": "theclown@mcdonalds.com",
-    "password": "password12345"
+    "password": "password12345",
+    "cooler": [1,3,4]
   }
 ]
