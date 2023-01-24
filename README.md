@@ -116,5 +116,4 @@ For those who venture to our parent project, [So-Cal Brew Hopper](https://isaaca
 * Pull requests are welcome. 
 * For major changes, please open an issue first to discuss what you would like to change.
 
-
 [Top of Page](#beerstack)
