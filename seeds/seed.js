@@ -3,7 +3,6 @@ const { User, Beers, Post } = require('../models');
 
 const userData = require('./userData.json');
 const beerData = require('./beerData.json');
-const postData = require('./postData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -17,13 +16,8 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
-  await Post.bulkCreate(postData, {
-    individualHooks: true,
-    returning: true,
-  });
   
-  console.log('\n---------Seeding Complete---------\n')
+  console.log('\n---------Seeding Complete---------\n');
   process.exit(0);
 
 };
