@@ -26,7 +26,7 @@
   font-family: 'Special Elite', cursive;
   font-size: 25px;
   background-color: var(--slate);
-  height: 250vh;
+  height: 140vh;
 }
 
 .sideAside {
@@ -52,6 +52,17 @@
   border-bottom-width: 100%;
   background-color: var(--brew);
   color: var(--black);
+}
+.nav-linkmain1 {
+  margin: 20px;
+  border-style: ridge;
+  border-top: 100% #000000;
+  border-top-width: 100%;
+  border-bottom: solid var(--black);
+  border-bottom-width: 100%;
+  background-color: var(--brew);
+  color: var(--black);
+  width: 50%;
 }
 
 .mainhbsBody {
@@ -98,7 +109,7 @@
   align-items: center;
   padding-top: 5px;
   border-radius: 5px;
-  width: 500px;
+  width: 400px;
 }
 
 #addcoolerBtn {

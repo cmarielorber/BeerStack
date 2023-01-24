@@ -1,27 +1,27 @@
 <div class="p-3" style="border: 2px ridge var(--brew); background-color:var(--offbg)">
   <div class="mb-3">
-    <h2 class="beerstackTitle" style="color:var(--brew); display:flex; justify-content:center">Beer List</h2>
+    <h2 class="beerstackTitle" style="color:var(--brew); display:flex; justify-content:center">Brewclopedia</h2>
     </div>
   <div class="mb-3">
     <table class="table">
     <div>
-      <thead class="table-dark">
+      <thead class="table-dark" >
         <tr style="border: 1px solid var(--brew);">
           <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Beer: </th>
-          <th scope="col" style="border-left: 1px solid var(--brew); border-right: 1px solid var(--brew); text-align: center; color:var(--brew);">Likes : </th>
-          {{#if login_status }}
+          {{!-- <th scope="col" style="border-left: 1px solid var(--brew); border-right: 1px solid var(--brew); text-align: center; color:var(--brew);">Likes : </th> --}}
+          {{!-- {{#if login_status }}
           <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Cooler:</th>
-          {{/if}}
+          {{/if}} --}}
         </tr>
       </thead>
       <tbody>
         {{#each beers}}
         <tr class="table-dark">
-          <td scope="row" style="border: 1px solid var(--brew); text-align: center;color:white" class="coolerBeerName">{{name}}</td>
-          <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td>
-          {{#if ../login_status }}
-          <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addCoolerBtn">ADD</button></td>
-          {{/if}}
+          <td scope="row" style="border: 1px solid var(--brew); text-align: center;color:white; font-size: 40px" class="coolerBeerName">{{name}}</td>
+          {{!-- <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td> --}}
+          {{!-- {{#if ../login_status }}
+          <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addCoolerBtn" onClick="coolerAdd(`{{id}}`)">ADD</button></td>
+          {{/if}} --}}
         </tr>
         {{/each}}
       </tbody>
@@ -29,7 +29,7 @@
   </table>
   </div>
   <div style="display: flex; justify-content:center;">
-    <button id="addBrewbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display: flex; justify-content:center"> ++ Add a Beer to Beerstack's Beerlist ++</button>
+    <button id="addBrewbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display: flex; justify-content:center"> ++ Add to Beerstack's Beerlist ++</button>
   </div>
 
 {{!-- modal --}}
@@ -58,4 +58,4 @@
   </div>
 </article>
 <script src='/js/new-beer-post.js'></script>
-<script src='/js/cooleradd.js'></script>
+

@@ -1,0 +1,36 @@
+<div class="p-3" style="border: 2px ridge var(--brew); background-color:var(--offbg)">
+  <div class="mb-3">
+    <h2 class="beerstackTitle" style="color:var(--brew); display:flex; justify-content:center">Brewstack</h2>
+    </div>
+  <div class="mb-3">
+    <table class="table">
+    <div>
+      <thead class="table-dark" >
+        <tr style="border: 1px solid var(--brew);">
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew); font-size: 40px">Post Title: </th>
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew); font-size: 40px">Post Details: </th>
+          {{!-- <th scope="col" style="border-left: 1px solid var(--brew); border-right: 1px solid var(--brew); text-align: center; color:var(--brew);">Likes : </th> --}}
+          {{!-- {{#if login_status }}
+          <th scope="col" style="border: 1px solid var(--brew); text-align: center; color:var(--brew)">Cooler:</th>
+          {{/if}} --}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#each allposts}}
+        <tr class="table-dark">
+          <td scope="row" style="border: 1px solid var(--brew); text-align: center; color:white; font-size: 25px" class="coolerBeerName">{{title}}</td>
+           <td scope="row" style="border: 1px solid var(--brew); text-align: center; color:white; font-size: 15px" class="coolerBeerName">{{post_text}}</td>
+          {{!-- <td style="border: 1px solid var(--brew); text-align: center;color:white">{{likes}}</td> --}}
+          {{!-- {{#if ../login_status }}
+          <td style="border: 1px solid var(--brew); text-align: center;color:white"><button id="addCoolerBtn" onClick="coolerAdd(`{{id}}`)">ADD</button></td>
+          {{/if}} --}}
+        </tr>
+        {{/each}}
+      </tbody>
+    </div>
+  </table>
+  </div>
+  <div style="display: flex; justify-content:center;">
+    <button id="addBrewbtn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="display: flex; justify-content:center"> ++ Add to Beerstack's Beerlist ++</button>
+  </div>
+

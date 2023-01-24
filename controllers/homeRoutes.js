@@ -13,15 +13,27 @@ router.get('/', async (req, res) => {
     res.json(err);
   });
 
-  const posts = postData.slice(0, 10).map((post) => post.get({ plain: true }));
-  const beers = beerData.slice(0, 10).map((post) => post.get({ plain: true }));
+  const posts = postData.slice(0, 8).map((post) => post.get({ plain: true }));
+  const beers = beerData.slice(0, 8).map((post) => post.get({ plain: true }));
   res.render('homepage', { posts, beers, login_status });
 });
 
+
+
+// Render All Post
+router.get('/allpost', async (req, res) => {
+  const login_status = req.session.logged_in;
+  const postData = await Post.findAll().catch((err) => {
+    res.json(err);
+  });
+  const allposts = postData.map((post) => post.get({ plain: true }));
+  res.render('allpost', { allposts, login_status });
+})
+
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
+  const login_status = req.session.logged_in;
   try {
-    const login_status = req.session.logged_in;
     res.render('socalbrew', { login_status });
   } catch (err) {
     res.status(500).json(err);
