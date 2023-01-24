@@ -14,6 +14,7 @@
       <div style="color: var(--brew);">Beerstack</div>
     </h1>
     <ul class="nav justify-content-end">
+      {{#if login_status}}
       <a style="color: var(--brew);" href="/">
         <img 
         id="logoimg rounded-circle" 
@@ -24,6 +25,7 @@
         class="rounded-circle navbar-brand ">
         </img>
     </a>
+      {{else}}
       <li class="nav-item">
         <button class="nav-itemmain">
           <a class="logsignBtn"
@@ -38,6 +40,7 @@
           </a>
         </button>
       </li>
+      {{/if}}
        </a>
   </div>
 </nav>
