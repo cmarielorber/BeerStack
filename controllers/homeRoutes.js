@@ -32,8 +32,9 @@ router.get('/allpost', async (req, res) => {
 
 // Render Socal Brew
 router.get('/socalbrew', async (req, res) => {
+  const login_status = req.session.logged_in;
   try {
-    res.render('socalbrew', {  });
+    res.render('socalbrew', { login_status });
   } catch (err) {
     res.status(500).json(err);
   }

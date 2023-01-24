@@ -19,32 +19,32 @@
               <label
                 for='exampleFormControlInput1'
                 class='form-label'
-                style='color:var(--brew);'
+                style='color:var(--brew); text-align:center'
               >Recent Posts</label>
               <thead class='table-dark'>
 
-                <tr style='border: 1px solid var(--brew);'>
+                <tr style='border: 1px solid var(--brew); text-align:center'>
                   <th
                     scope='col'
-                    style='border: 1px solid var(--brew);'
+                    style='border: 1px solid var(--brew);text-align:center'
                   >Title</th>
                   <th
                     scope='col'
-                    style='border: 1px solid var(--brew);'
+                    style='border: 1px solid var(--brew);text-align:center'
                   >Details</th>
                 </tr>
 
               </thead>
               <tbody>
                 {{#each posts}}
-                  <tr style='border: 1px solid var(--brew);'>
+                  <tr style='border: 1px solid var(--brew);text-align:center'>
                     <th
                       scope='col'
-                      style='border: 1px solid var(--brew); color:white'
+                      style='border: 1px solid var(--brew); color:white; text-align:center'
                     >{{title}}</th>
                     <th
                       scope='col'
-                      style='border: 1px solid var(--brew); color:white'
+                      style='border: 1px solid var(--brew); color:white;text-align:center'
                     > {{post_text}}</th>
                   </tr>
                 {{/each}}
@@ -68,25 +68,17 @@
                 >Beer List</label>
                 <thead class='table-dark'>
                   <tr style='border: 1px solid var(--brew);'>
-                    <th scope='col' style='border: 1px solid var(--brew);'>Beer
+                    <th scope='col' style='border: 1px solid var(--brew);text-align:center'>Beer
                       Name</th>
-                    <th
-                      scope='col'
-                      style='border: 1px solid var(--brew);'
-                    >Likes</th>
                   </tr>
                 </thead>
                 <tbody>
                   {{#each beers}}
                     <tr>
-                      <th
-                        scope='row'
-                        style='border: 1px solid var(--brew); color:white'
-                      >{{name}}</th>
                       <td
-                        style='border: 1px solid var(--brew); color:white'
-                      >{{likes}}</td>
-                    </tr>
+                        scope='row'
+                        style='border: 1px solid var(--brew); color:white; text-align:center'
+                      >{{name}}</td>
                   {{/each}}
 
                 </tbody>
@@ -95,13 +87,16 @@
             <div class='nav-itemmain'>
               <a class='nav-linkmain' href='/beerpost'>Brewclopedia</a>
             </div>
+          
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+            <div class='nav-itemmain1' style="display: flex; justify-content:center">
+              <a class='nav-linkmain1' style="display: flex; justify-content:center" href='/beerpost'>Add a Post!</a>
+            </div>  
 {{!--
 
 <body>
