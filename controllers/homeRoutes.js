@@ -13,8 +13,8 @@ router.get('/', async (req, res) => {
     res.json(err);
   });
 
-  const posts = postData.slice(0, 10).map((post) => post.get({ plain: true }));
-  const beers = beerData.slice(0, 10).map((post) => post.get({ plain: true }));
+  const posts = postData.slice(0, 8).map((post) => post.get({ plain: true }));
+  const beers = beerData.slice(0, 8).map((post) => post.get({ plain: true }));
   res.render('homepage', { posts, beers, login_status });
 });
 
