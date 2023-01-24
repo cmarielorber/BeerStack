@@ -3,9 +3,6 @@
     "name": "Budweiser"
   },
   {
-    "name": "Budlight"
-  },
-  {
     "name": "Modelo"
   },
   {
@@ -16,8 +13,5 @@
   },
   {
     "name": "Coors"
-  },
-  {
-    "name": "Coors Light"
   }
 ]
