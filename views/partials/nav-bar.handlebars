@@ -14,11 +14,16 @@
       <div style="color: var(--brew);">Beerstack</div>
     </h1>
     <ul class="nav justify-content-end">
-      {{#if login_status}} 
-      <li class="nav-itemmain">
-        <a class="nav-linkmain" href="/dashboard">Dashboard</a>
-      </li>  
-      {{else}}
+      <a style="color: var(--brew);" href="/">
+        <img 
+        id="logoimg rounded-circle" 
+        src="/images/Beerstack.png" 
+        alt="SoCal Brew Logo" 
+        width="150"
+        height="150" 
+        class="rounded-circle navbar-brand ">
+        </img>
+    </a>
       <li class="nav-item">
         <button class="nav-itemmain">
           <a class="logsignBtn"
